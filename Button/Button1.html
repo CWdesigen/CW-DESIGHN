@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buttons 02</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <button>
+        <div>
+            <span></span>
+            <a href="#">Play Free</a>
+        </div>
+    </button>
+    <style>
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Roboto";
+            background-color: #090909;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        button {
+            border: 0;
+            cursor: pointer;
+            position: relative;
+        }
+
+        button div {
+            background-color: rgb(255, 70, 85);
+            padding: 1.2rem 5.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        button a {
+            position: relative;
+            text-decoration: none;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #ece8e1;
+            text-transform: uppercase;
+            z-index: 2;
+        }
+
+        button::before,
+        button::after {
+            content: "";
+            position: absolute;
+            width: 105%;
+            height: 50%;
+            background-color: transparent;
+            border: 1px solid rgb(134, 129, 124);
+            left: -2.5%;
+            z-index: -1;
+        }
+
+        button::before {
+            border-bottom: 0;
+            top: -10%;
+        }
+
+        button::after {
+            border-top: 0;
+            bottom: -10%;
+        }
+
+        button span {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 120%;
+            height: 110%;
+            background-color: rgb(15, 25, 35);
+            transform: translateX(-105%) skew(-10deg);
+            transition: 0.4s ease;
+        }
+
+        button:hover span {
+            transform: translateX(-5%) skew(-10deg);
+        }
+    </style>
+</body>
+
+</html>

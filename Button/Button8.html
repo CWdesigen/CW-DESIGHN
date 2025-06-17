@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- HTML !-->
+    <button class="btn" role="button">Button</button>
+    <style>
+        /* CSS */
+        body{
+            background-color: black;
+            height: 97vh;
+            width: 99%;
+            display: grid;
+            place-items: center;
+        }
+        .btn {
+            font-size: 16px;
+            font-weight: 200;
+            letter-spacing: 1px;
+            padding: 13px 20px 13px;
+            outline: 0;
+            border: 1px solid rgb(255, 255, 255);
+            cursor: pointer;
+            position: relative;
+            background-color: rgba(0, 0, 0, 0);
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            color: white;
+        }
+
+        .btn:after {
+            content: "";
+            background-color: #286728;
+            width: 100%;
+            z-index: -1;
+            position: absolute;
+            height: 100%;
+            top: 7px;
+            left: 7px;
+            transition: 0.2s;
+        }
+
+        .btn:hover:after {
+            top: 0px;
+            left: 0px;
+        }
+
+        @media (min-width: 768px) {
+            .btn {
+                padding: 13px 50px 13px;
+            }
+        }
+    </style>
+</body>
+
+</html>
