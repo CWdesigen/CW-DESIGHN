@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>social media logo animation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(245, 245, 245);
+            margin-top: 25%;
+        }
+
+        .fab {
+            color: #fff;
+            font-size: 4vmin;
+        }
+
+        .glowing {
+            display: flex;
+            height: 20vh;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .glowing ul {
+            display: flex;
+            margin-top: 20px;
+        }
+
+        .glowing ul li {
+            list-style: none;
+            position: relative;
+            width: 8vmin;
+            height: 8vmin;
+            margin: 0px 20px;
+            border-radius: 50%;
+        }
+
+        .glowing ul li::before,
+        .glowing ul li::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #000;
+            border-radius: 50%;
+            opacity: 0;
+            filter: blur(20px);
+            z-index: 1;
+        }
+
+        .glowing ul li::after {
+            filter: blur(40px);
+        }
+
+        .glowing ul li:hover::after,
+        .glowing ul li:hover::before {
+            opacity: 1;
+        }
+
+        .glowing ul li a {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #000;
+            border-radius: 50%;
+        }
+
+        .glow {
+            top: 12px;
+            position: absolute;
+            left: 10px;
+            right: 10px;
+            bottom: 10px;
+            text-align: center;
+            line-height: 80px;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            transition: 0.5s;
+            transform: scale(0.8);
+            opacity: 0.4;
+            z-index: 10;
+        }
+
+        .glowing ul li:hover a .glow {
+            opacity: 1;
+            transform: scale(1.2);
+        }
+
+        .glowing ul li:nth-child(1) a,
+        .glowing ul li:nth-child(1):after,
+        .glowing ul li:nth-child(1):before {
+            background-color: #3b5998;
+        }
+
+        .glowing ul li:nth-child(2) a,
+        .glowing ul li:nth-child(2):after,
+        .glowing ul li:nth-child(2):before {
+            background-color: #25d366;
+        }
+
+        .glowing ul li:nth-child(3) a,
+        .glowing ul li:nth-child(3):after,
+        .glowing ul li:nth-child(3):before {
+            background-color: #ce0606;
+        }
+
+        .glowing ul li:nth-child(4) a,
+        .glowing ul li:nth-child(4):after,
+        .glowing ul li:nth-child(4):before {
+            background-color: #000;
+        }
+
+        .glowing ul li:nth-child(5) a,
+        .glowing ul li:nth-child(5):after,
+        .glowing ul li:nth-child(5):before {
+            background-color: #00acee;
+        }
+
+
+    </style>
+</head>
+
+<body>
+
+    
+    <section class="glowing">
+        <ul>
+            <li>
+                <a href="#"><i class="fab fa-facebook-f glow"></i></a>
+            </li>
+            <li><a href="#"><i class="fab fa-whatsapp glow"></i></a></li>
+            <li><a href="#"><i class="fab fa-youtube glow"></i></a></li>
+            <li><a href="#"><i class="fab fa-github glow"></i></a></li>
+            <li><a href="#"><i class="fab fa-twitter glow"></i></a></li>
+        </ul>
+    </section>
+
+    <script src="https://kit.fontawesome.com/bad7f7f5d4.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

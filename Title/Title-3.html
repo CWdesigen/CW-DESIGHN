@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ext Changing Animation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="slider">
+        <div class="span">We excel at</div>
+        <div class="span" id="sliderValue"></div>
+    </div>
+    <style>
+        body {
+            font-family: 'Ubuntu', sans-serif;
+            margin: 0 auto;
+            background-color: #0f172a;
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #slider {
+            width: 600px;
+            display: flex;
+            gap: 15px;
+            font-size: 30px;
+        }
+
+        #sliderValue {
+            display: flex;
+            color: #baee00;
+            font-weight: 700;
+        }
+
+        .start {
+            opacity: 0;
+        }
+
+        .animation {
+            animation: fade .3s forwards;
+        }
+
+
+        @keyframes fade {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px) rotateZ(35deg);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0px) rotateZ(0deg);
+            }
+        }
+
+        .holder-animation {
+            animation: holder 4s;
+        }
+
+        @keyframes holder {
+            0% {
+                opacity: 1;
+            }
+
+            95% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+    </style>
+    <script>
+        var sliderCounter = 0;
+        var sliderContent = [
+            "Web Development",
+            "ReactNative Development",
+            "App Development",
+            "UI/UX Designing",
+            "Web Designing"
+        ];
+        var slider = document.querySelector("#slider");
+        var sliderValue = document.querySelector("#sliderValue");
+
+        function slide() {
+            if (sliderCounter >= sliderContent.length) {
+                sliderCounter = 0;
+            }
+
+            sliderValue.innerHTML = "";
+
+            sliderValue.classList.remove("holder-animation");
+            sliderValue.classList.add("holder-animation");
+
+            for (i = 0; i < sliderContent[sliderCounter].length; i++) {
+                let letterDiv = document.createElement("div");
+                letterDiv.innerHTML = sliderContent[sliderCounter][i];
+
+                if (letterDiv.innerHTML == " ") {
+                    letterDiv.innerHTML = "&nbsp;";
+                }
+                letterDiv.classList.add("start");
+                letterDiv.classList.add("animation");
+                letterDiv.style.animationDelay = i / 10 + "s";
+                sliderValue.appendChild(letterDiv);
+            }
+
+            sliderCounter++;
+        }
+
+        slide();
+        setInterval(slide, 4000);
+    </script>
+</body>
+
+</html>

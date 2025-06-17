@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>social media</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(245, 245, 245);
+            margin-top: 25%;
+        }
+
+        
+        .expand {
+            display: flex;
+            height: 20vh;
+            align-items: flex-end;
+            justify-content: center;
+        }
+
+        .fab {
+            color: #fff;
+            font-size: 4vmin;
+        }
+
+
+
+        .expand {
+            align-items: center;
+        }
+
+        .expand div {
+            width: 3rem;
+            height: 3rem;
+            position: relative;
+            border-radius: 50%;
+            margin: 0 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .expand i {
+            font-size: 2rem;
+            position: absolute;
+            top: 8px;
+            left: 8px;
+            right: 8px;
+            bottom: 8px;
+        }
+
+        .expand p {
+            opacity: 0;
+        }
+
+        .expand div:nth-child(1):hover {
+            width: 10rem;
+            border-radius: 50px;
+            transition: 0.2s linear;
+            background-color: #3b5998;
+        }
+
+        .expand div:nth-child(2):hover {
+            width: 10rem;
+            border-radius: 50px;
+            transition: 0.2s linear;
+            background-color: #25d366;
+        }
+
+        .expand div:nth-child(3):hover {
+            width: 8rem;
+            border-radius: 50px;
+            transition: 0.2s linear;
+            background-color: #00acee;
+        }
+
+        .expand div:nth-child(4):hover {
+            width: 8rem;
+            border-radius: 50px;
+            transition: 0.2s linear;
+            background-color: #000;
+        }
+
+        .expand div:nth-child(5):hover {
+            width: 8rem;
+            border-radius: 50px;
+            transition: 0.2s linear;
+            background-color: #ce0606;
+        }
+
+        .expand:hover div {
+            animation: none;
+        }
+
+        .expand div:hover p {
+            opacity: 1;
+            transition: transform 0.2s;
+            text-align: center;
+            transform: translateX(20px);
+            color: #fff;
+            font-weight: 600;
+        }
+
+        .expand div:hover i {
+            transition: transform 1s ease-in-out;
+            transform: rotate(-360deg);
+            width: max-content;
+        }
+
+        .expand .fa-facebook-f {
+            color: #3b5998;
+        }
+
+        .expand div:hover .fa-facebook-f {
+            color: #fff;
+        }
+
+        .expand .fa-whatsapp {
+            color: #25d366;
+        }
+
+        .expand div:hover .fa-whatsapp {
+            color: #fff;
+        }
+
+        .expand .fa-twitter {
+            color: #00acee;
+        }
+
+        .expand div:hover .fa-twitter {
+            color: #fff;
+        }
+
+        .expand div:hover .fa-github {
+            color: #fff;
+        }
+
+        .expand .fa-youtube {
+            color: #ce0606;
+        }
+
+        .expand div:hover .fa-youtube {
+            color: #fff;
+        }
+
+        .expand .fa-github {
+            color: #000;
+        }
+
+
+    </style>
+</head>
+
+
+<body>
+
+    <section class="expand">
+        <div><i class="fab fa-facebook-f"></i>
+            <p>Facebook</p>
+        </div>
+        <div><i class="fab fa-whatsapp"></i>
+            <p>Whatsapp</p>
+        </div>
+        <div><i class="fab fa-twitter"></i>
+            <p>Twitter</p>
+        </div>
+        <div><i class="fab fa-github"></i>
+            <p>Github</p>
+        </div>
+        <div><i class="fab fa-youtube"></i>
+            <p>Youtube</p>
+        </div>
+    </section>
+
+    <script src="https://kit.fontawesome.com/bad7f7f5d4.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

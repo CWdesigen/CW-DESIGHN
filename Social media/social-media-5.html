@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>social media logo animation
+
+    </title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(245, 245, 245);
+            margin-top: 25%;
+        }
+
+        .layering{
+            display: flex;
+            height: 20vh;
+            align-items: flex-end;
+            justify-content: center;
+        }
+
+        .layering ul {
+            position: relative;
+            display: flex;
+            margin-bottom: 10px;
+        }
+
+        .layering ul li {
+            list-style: none;
+            width: 8vmin;
+            margin: 0 20px;
+            height: 8vmin;
+            transform: rotate(-30deg) skew(25deg);
+            background: #ccc;
+            border-radius: 10px;
+        }
+
+        .layering ul li span {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #000;
+            transition: 0.5s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+        }
+
+        .fab {
+            color: #fff;
+            font-size: 4vmin;
+        }
+
+        .layering ul li:nth-child(1) span {
+            background: #3b5998;
+        }
+
+        .layering ul li:nth-child(2) span {
+            background: #25d366;
+        }
+
+        .layering ul li:nth-child(3) span {
+            background: #ce0606;
+        }
+
+        .layering ul li:nth-child(4) span {
+            background: #000;
+        }
+
+        .layering ul li:nth-child(5) span {
+            background: #00acee;
+        }
+
+        .layering ul li:hover span:nth-child(5) {
+            transform: translate(40px, -40px);
+            opacity: 1;
+        }
+
+        .layering ul li:hover span:nth-child(4) {
+            transform: translate(30px, -30px);
+            opacity: 0.8;
+        }
+
+        .layering ul li:hover span:nth-child(3) {
+            transform: translate(20px, -20px);
+            opacity: 0.6;
+        }
+
+        .layering ul li:hover span:nth-child(2) {
+            transform: translate(10px, -10px);
+            opacity: 0.4;
+        }
+
+        .layering ul li:hover span:nth-child(1) {
+            transform: translate(0px, -0px);
+            opacity: 0.2;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="layering">
+        <ul>
+            <li>
+                <a href="#">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span><i class="fab fa-facebook-f"></i></span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span><i class="fab fa-whatsapp"></i></span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span><i class="fab fa-youtube"></i></span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span><i class="fab fa-github"></i></span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span><i class="fab fa-twitter"></i></span>
+                </a>
+            </li>
+        </ul>
+    </section>
+    
+
+    <script src="https://kit.fontawesome.com/bad7f7f5d4.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
