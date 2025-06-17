@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image style</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+</head>
+
+<body>
+    <div class="swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="slide-image-wrapper">
+                    <img src="../image/macau.jpeg">
+                </div>
+                <div class="slide-content">
+                    <h2>Macau</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt numquam ea aperiam esse quia
+                        deserunt beatae ratione minus iusto eligendi.</p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="slide-image-wrapper">
+                    <img src="../image/Rome.jpeg">
+                </div>
+                <div class="slide-content">
+                    <h2>Rome</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt numquam ea aperiam esse quia
+                        deserunt beatae ratione minus iusto eligendi.</p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="slide-image-wrapper">
+                    <img src="../image/Jaipur.jpeg">
+                </div>
+                <div class="slide-content">
+                    <h2>Jaipur</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt numquam ea aperiam esse quia
+                        deserunt beatae ratione minus iusto eligendi.</p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="slide-image-wrapper">
+                    <img src="../image/Dubai.jpeg">
+                </div>
+                <div class="slide-content">
+                    <h2>Dubai</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt numquam ea aperiam esse quia
+                        deserunt beatae ratione minus iusto eligendi.</p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="slide-image-wrapper">
+                    <img src="../image/Barcelona.jpeg">
+                </div>
+                <div class="slide-content">
+                    <h2>Barcelona</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt numquam ea aperiam esse quia
+                        deserunt beatae ratione minus iusto eligendi.</p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="slide-image-wrapper">
+                    <img src="../image/Amsterdam.jpeg">
+                </div>
+                <div class="slide-content">
+                    <h2>Amsterdam</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt numquam ea aperiam esse quia
+                        deserunt beatae ratione minus iusto eligendi.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="swiper-pagination"></div>
+    </div>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap");
+
+        *,
+        *::after,
+        *::before {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Montserrat", sans-serif;
+            min-height: 100vh;
+            background-image: linear-gradient(45deg,
+                    rgba(255, 166, 0, 1) 14.7%,
+                    rgba(255, 99, 97, 1) 73%);
+            color: #212121;
+            display: grid;
+            place-items: center;
+        }
+
+        .swiper {
+            width: 100%;
+            max-width: 420px;
+            height: 100%;
+            max-height: 570px;
+            background-color: #f3f6ff;
+            border-radius: 10px;
+            position: relative;
+            cursor: grab;
+        }
+
+        .slide-image-wrapper {
+            width: 100%;
+            height: 390px;
+            overflow: hidden;
+        }
+
+        .slide-image-wrapper>img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+        }
+
+        .slide-content {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+
+        .slide-content>h2 {
+            font-size: 22px;
+            color: #26384e;
+        }
+
+        .slide-content>p {
+            font-size: 15px;
+            line-height: 22px;
+            color: #6080a9;
+        }
+
+        .slide-content>* {
+            opacity: 0;
+            translate: 0 20px;
+        }
+
+        .swiper-slide-active>.slide-content>h2 {
+            transition-delay: 0.1s;
+        }
+
+        .swiper-slide-active>.slide-content>p {
+            transition-delay: 0.3s;
+        }
+
+        .swiper-slide-active>.slide-content>* {
+            opacity: 1;
+            translate: 0 0;
+            transition: all 0.3s;
+        }
+
+        .swiper-pagination {
+            position: absolute;
+            bottom: 8px;
+            left: 50% !important;
+            transform: translatex(-50%);
+            cursor: default;
+        }
+
+        .swiper-pagination-bullet {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            opacity: 1;
+            background: rgba(255, 185, 0, 0.3);
+            display: inline-block;
+            margin-right: 8px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .swiper-pagination-bullet-active {
+            background: #ffb200;
+            width: 20px;
+            border-radius: 10px;
+        }
+    </style>
+    <script>
+        const swiper = new Swiper(".swiper", {
+            direction: "horizontal",
+            slidesPerView: 1,
+            effect: "fade",
+            loop: true,
+            speed: 300,
+
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+    </script>
+</body>
+
+</html>

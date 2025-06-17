@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/4283c114de.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <div class="sign-up-form">
+        <form action="">
+            <h1>Sign-up</h1>
+            <i class='bx bx-user'></i>
+            <input type="text" class="sign-up-content firstName" placeholder="First name" required><br>
+            <i class='bx bx-user'></i>
+            <input type="text" class="sign-up-content" placeholder="Last name"><br>
+            <i class='bx bx-envelope'></i>
+            <input type="email" class="sign-up-content email" placeholder="Email" required><br>
+            <i class="fa-solid fa-circle-user"></i>
+            <input type="text" class="sign-up-content username" placeholder="User Name" required><br>
+            <i class='bx bx-lock-alt pass'></i>
+            <input type="password" class="sign-up-content password-input_1" placeholder="Password" required>
+            <i class='bx bx-show' id="show1"></i>
+            <br>
+            <i class='bx bx-lock-alt pass'></i>
+            <input type="password" class="sign-up-content password-input_2" placeholder="Re-enter Password" required>
+            <i class='bx bx-show' id="show2"></i>
+            <br>
+            <!--<label for="role" class="sign-up-content">Select your role:</label><br><br>
+             <select name="role" id="role">
+                <option value="Visitor">Visitor</option>
+                <option value="Programmer">Programmer(buy, sale)</option>
+                <option value="Student">Student</option>
+
+            </select> -->
+            <p><input type="checkbox" class="check-box" required>
+                <span for="check-box">By proceeding, you agree <br> to the <a class="check-box-text" href="#">Terms of
+                        Service</a>
+                    and <a href="#" class="check-box-text">Privacy Notice</a>.</span>
+            </p>
+            <button class="sign-up-btn">Sign Up</button>
+            <div class="span-div">
+                <span class="span-account">already have an account? </span>
+                <a class="login" href="login.html"> Login now!</a>
+            </div>
+
+        </form>
+    </div>
+
+
+
+    <style>
+        @keyframes border-style {
+
+            0% {
+
+                border-bottom-style: solid;
+                border-bottom-width: 1px;
+            }
+
+            25% {
+                border-left-style: solid;
+                border-left-width: 1px;
+            }
+
+            50% {
+                border-top-style: solid;
+                border-top-width: 1px;
+            }
+
+            75% {
+                border-right-style: solid;
+                border-right-width: 1px;
+            }
+        }
+
+        @keyframes shadow {
+            0% {
+                box-shadow: 2px 2px 20px 3px #0db566;
+            }
+
+            3% {
+                box-shadow: 2px 2px 20px 3px #710d0d;
+            }
+
+            6% {
+                box-shadow: 2px 2px 20px 3px #650d71;
+            }
+
+            8% {
+                box-shadow: 2px 2px 20px 3px #c0304d;
+            }
+
+            11% {
+                box-shadow: 2px 2px 20px 3px #91cb0a;
+            }
+
+            14% {
+                box-shadow: 2px 2px 20px 3px #a28b08;
+            }
+
+            19% {
+                box-shadow: 2px 2px 20px 3px #3a135a;
+            }
+
+            22% {
+                box-shadow: 2px 2px 20px 3px #47099e;
+            }
+
+            26% {
+                box-shadow: 2px 2px 20px 3px #e917aa;
+            }
+
+            30% {
+                box-shadow: 2px 2px 20px 3px #cb0a7b;
+            }
+
+            35% {
+                box-shadow: 2px 2px 20px 3px #09ff3e;
+            }
+
+            39% {
+                box-shadow: 2px 2px 20px 3px #cb6a0a;
+            }
+
+            43% {
+                box-shadow: 2px 2px 20px 3px #cb310a;
+            }
+
+            47% {
+                box-shadow: 2px 2px 20px 3px #0acb51;
+            }
+
+            50% {
+                box-shadow: 2px 2px 20px 3px #4c5e23;
+            }
+
+            54% {
+                box-shadow: 2px 2px 20px 3px #4e193c;
+            }
+
+            58% {
+                box-shadow: 2px 2px 20px 3px saddlebrown;
+            }
+
+            63% {
+                box-shadow: 2px 2px 20px 3px rgb(45, 25, 77);
+            }
+
+            67% {
+                box-shadow: 2px 2px 20px 3px rgb(51, 54, 44);
+            }
+
+            70% {
+                box-shadow: 2px 2px 20px 3px #24424c;
+            }
+
+            74% {
+                box-shadow: 2px 2px 20px 3px #ff0000;
+            }
+
+            77% {
+                box-shadow: 2px 2px 20px 3px #ff8800;
+            }
+
+            80% {
+                box-shadow: 2px 2px 20px 3px #fffb00;
+            }
+
+            83% {
+                box-shadow: 2px 2px 20px 3px #88ff00;
+            }
+
+            87% {
+                box-shadow: 2px 2px 20px 3px #00ffe5;
+            }
+
+            90% {
+                box-shadow: 2px 2px 20px 3px #04b4ff;
+            }
+
+            94% {
+                box-shadow: 2px 2px 20px 3px #0037ff;
+            }
+
+            98% {
+                box-shadow: 2px 2px 20px 3px rgb(255, 0, 187);
+            }
+        }
+
+        @keyframes shadow-hover {
+            0% {
+                margin: -10px;
+                box-shadow: 2px 2px 20px 3px #0acb51;
+            }
+
+            25% {
+                margin-right: 100px;
+                animation-play-state: paused;
+                box-shadow: 2px 2px 20px 10px palevioletred;
+            }
+
+            50% {
+                box-shadow: 2px 2px 20px 10px #ff0000;
+                margin-top: 100px;
+                animation-play-state: paused;
+            }
+
+            75% {
+                box-shadow: 2px 2px 20px 10p #ff8800;
+                margin-bottom: 5px;
+                margin-left: 200px;
+            }
+
+            100% {
+                box-shadow: 2px 2px 20px 10px #8e068e;
+                margin-right: 2px;
+                margin-bottom: 200px;
+            }
+        }
+
+
+
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            color: #00ffe5;
+            display: grid;
+            place-items: center;
+            font-family: cursive;
+            background-color: #000000;
+            /* background: linear-gradient(45deg, rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5), rgba(255, 0, 0, 0.5), rgba(0, 255, 0, 0.5));
+            background-repeat: no-repeat;
+            background-size: 200% 200%;
+            animation: gradient-animation 10s infinite alternate; */
+        }
+
+        @keyframes gradient-animation {
+            0% {
+                background-position: 0% 0%;
+            }
+
+            25% {
+                background-position: 100% 0%;
+            }
+
+            50% {
+                background-position: 100% 100%;
+            }
+
+            75% {
+                background-position: 0% 100%;
+            }
+
+            100% {
+                background-position: 0% 0%;
+            }
+        }
+
+
+
+        .sign-up-form {
+            margin: 6% auto;
+            text-align: center;
+            display: grid;
+            color: #00ffe5;
+            place-items: center;
+            /* background-color: black; */
+            width: 400px;
+            height: 600px;
+            padding: 5px;
+            border-radius: 30px;
+            box-shadow: 2px 2px 20px 3px #28f6c2;
+            /* animation: shadow 50s infinite linear; */
+            z-index: 1000;
+        }
+
+        /* .sign-up-form:hover {
+            animation-play-state: paused;
+
+        } */
+
+        .sign-up-content {
+            width: 50%;
+            padding: 10px 0;
+            margin: 5px 0;
+            border-left: 0;
+            border-top: 0;
+            border-right: 0;
+            border-bottom: 1px solid #999;
+            outline: none;
+            background: transparent;
+            color: #00ffe5;
+
+
+        }
+
+        #show1,
+        #show2 {
+            cursor: pointer;
+            /* padding-left: 12px; */
+        }
+
+        label {
+            font-size: 15px;
+        }
+
+        select {
+            background: transparent;
+            border: none;
+            text-align: center;
+            font-size: 15px;
+            color: #00ffe5;
+
+        }
+
+        option {
+            background: transparent;
+            border: none;
+            color: #000000;
+        }
+
+        p {
+            font-size: 10px;
+        }
+
+        span {
+            color: #777;
+            font-size: 12px;
+        }
+
+        .sign-up-btn {
+            width: 80px;
+            height: 30px;
+            background: transparent;
+           border:2px solid #28f6c2;
+            font-family: cursive;
+            color: #28f6c2;
+            cursor: pointer;
+
+        }
+
+        .sign-up-btn:hover {
+            color: #000000;
+            background-color: #28f6c2;
+        }
+
+        .span-div {
+            padding-bottom: 20px;
+        }
+
+        .login,
+        .check-box-text {
+            color: #0f8ec4;
+            font-size: 12px;
+        }
+
+        i {
+            text-align: left;
+            display: flex;
+            padding-right: 12px;
+        }
+
+        .pass {
+            padding-left: 30px;
+        }
+    </style>
+    <script>
+        const form = document.querySelector('form');
+        const firstName = document.querySelector('.firstName');
+        const username = document.querySelector('.username');
+        const email = document.querySelector('.email');
+        const password1 = document.querySelector('.password-input_1');
+        const password2 = document.querySelector('.password-input_2');
+        const checkBox = document.querySelector('.check-box');
+        const signUpBtn = document.querySelector('.sign-up-btn');
+        const showPassword1 = document.querySelector('#show1');
+        const showPassword2 = document.querySelector('#show2');
+        let isClicked = true;
+
+        showPassword1.addEventListener('click', () => {
+            if (password1.value && isClicked) {
+                password1.setAttribute("type", "text");
+                showPassword1.setAttribute('class', 'bx bx-hide');
+                isClicked = false;
+            } else if (password1.value && !isClicked) {
+                password1.setAttribute("type", "password");
+                showPassword1.setAttribute('class', 'bx bx-show');
+                isClicked = true;
+            }
+        });
+
+        showPassword2.addEventListener('click', () => {
+            if (password2.value && isClicked) {
+                password2.setAttribute("type", "text");
+                showPassword2.setAttribute('class', 'bx bx-hide');
+                isClicked = false;
+            } else if (password2.value && !isClicked) {
+                password2.setAttribute("type", "password");
+                showPassword2.setAttribute('class', 'bx bx-show');
+                isClicked = true;
+            }
+        });
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            if (password1.value !== password2.value){
+                alert('Passwords do not match');
+            }else if (firstName.value && username.value && email.value && password1.value && password2.value && checkBox.checked) {
+                alert('Registration successful, please login using your information');
+                window.location.href = '../html/login.html';
+            } else {
+                alert('Please fill all required fields and accept the terms.');
+            }
+        });
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="scripts.js"></script>
+    <title>Pricing</title>
+</head>
+
+<body>
+
+    <main>
+        <section class="plans">
+            <div class="plans-menu">
+                <p class="plans-title">Featured Plans</p>
+                <h3 id="month-button" class="plans-button monthly--on">MONTHLY</h3>
+                <h3 id="year-button" class="plans-button yearly--off">YEARLY</h3>
+            </div>
+            <div class="plans-cards">
+                <article class="cards">
+                    
+                    <p class="card-heading">Basic</p>
+                    <h3 class="card-pricing">FREE FOREVER</h3>
+                    <p class="card-p">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique, inventore
+                        illum doloremque quaerat minima sit!</p>
+                </article>
+                <article class="cards">
+                    
+                    <p class="card-heading">Professional</p>
+                    <h3 id="professional" class="card-pricing">$7/MONTH</h3>
+                    <p class="card-p">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique, inventore
+                        illum doloremque quaerat minima sit!</p>
+                </article>
+                <article class="cards">
+                    
+                    <p class="card-heading">Elite</p>
+                    <h3 id="elite" class="card-pricing">$14/MONTH</h3>
+                    <p class="card-p">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique, inventore
+                        illum doloremque quaerat minima sit!</p>
+                </article>
+            </div>
+        </section>
+
+    </main>
+
+    <style>
+        *,
+        *::before,
+        *::after {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0 auto;
+            width: 100%;
+            max-width: 1200px;
+        }
+        /*Plans Toggle*/
+        .plans {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .plans-menu {
+            padding: 7rem 3rem 5rem 3rem;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .plans-title {
+            font-family: "Noto Sans TC", sans-serif;
+            color: #1a561a;
+            font-weight: 400;
+            letter-spacing: 0.1rem;
+            margin-right: 1rem;
+            font-size: 2.5em;
+        }
+
+        .plans-button {
+            font-family: "Noto Sans TC", sans-serif;
+            font-size: 1em;
+            border: 3px solid orange;
+            padding: 0.9rem 2rem;
+            cursor: pointer;
+        }
+
+        .monthly--on {
+            color: white;
+            background-color: orange;
+        }
+
+        .monthly--off {
+            color: #1a561a;
+            background-color: rgba(252, 239, 229, 0.89);
+        }
+
+        .yearly--on {
+            color: white;
+            background-color: orange;
+        }
+
+        .yearly--off {
+            color: #1a561a;
+            background-color: rgba(252, 239, 229, 0.89);
+        }
+
+        /*Sub Cards*/
+        .plans-cards {
+            display: flex;
+            flex-direction: row;
+            padding: 0 2rem;
+        }
+
+        .cards {
+            font-family: "Noto Sans TC", sans-serif;
+            color: #1a561a;
+            display: flex;
+            margin: 0rem 1rem 4rem 1.2rem;
+            padding: 3rem 2rem 3rem 2rem;
+            border: 1px solid transparent;
+            border-radius: 10%;
+            box-shadow: 0px 0px 5px 7px rgb(235, 235, 235);
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .card-heading {
+            font-size: 2em;
+            font-weight: 400;
+            padding: 0 0 0.25em 0;
+        }
+
+        .card-pricing {
+            font-size: 1.75em;
+            font-weight: 900;
+        }
+
+        .card-p {
+            font-family: "Poppins", sans-serif;
+            font-weight: 400;
+            font-size: 1em;
+            line-height: 1.2em;
+            letter-spacing: 0.07em;
+            padding: 1.5rem 1rem 2.5rem 1rem;
+            text-align: center;
+        }
+
+        .cards h3 {
+            padding: 0.5rem 1rem 1rem 1rem;
+        }
+
+ 
+
+        @media (max-width: 790px) {
+           
+            .plans-menu {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            .plans-title {
+                letter-spacing: 0.1rem;
+                /*margin-right: 1rem; */
+                font-size: 2em;
+            }
+
+            .plans-button {
+                padding: 0.5rem 1.2rem;
+            }
+
+            .plans-cards {
+                flex-direction: column;
+                padding: 0 1.5rem;
+            }
+
+            .cards {
+                flex-direction: column;
+                margin: 0rem 1rem 2rem 1.2rem;
+                padding: 1rem 1rem 2rem 1rem;
+            }
+
+            .card-heading {
+                font-size: 1.75em;
+                padding: 0 0 0.25em 0;
+            }
+
+            .card-pricing {
+                font-size: 1.2em;
+            }
+
+            .card-p {
+                text-align: center;
+                padding: 1rem 0.5rem;
+            }
+
+            
+
+            .cards h3 {
+                padding: 0.5rem 1rem 1rem 1rem;
+            }
+
+            
+
+            .promise {
+                display: none;
+            }
+
+            .phone-button {
+                display: none;
+            }
+
+
+            .plans-menu {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .plans-title {
+                padding: 8rem 0 2rem 0;
+            }
+
+            .plans-button {
+                width: 120px;
+            }
+
+        }
+
+        @media (max-width: 481px) {
+            
+
+            .plans-title {
+                padding: 6rem 0 2rem 0;
+            }
+        }
+    </style>
+    <script>
+        const months = document.querySelector(".monthly--on").classList;
+        const years = document.querySelector(".yearly--off").classList;
+        const mButton = document.getElementById("month-button");
+        const yButton = document.getElementById("year-button");
+
+
+        yButton.onclick = () => {
+            if (years.contains("yearly--off")) {
+                months.replace("monthly--on", "monthly--off");
+                years.replace("yearly--off", "yearly--on");
+                professional.innerHTML = "$75/YEAR";
+                elite.innerHTML = "$150/YEAR";
+            }
+        };
+
+        mButton.onclick = () => {
+            if (months.contains("monthly--off")) {
+                months.replace("monthly--off", "monthly--on");
+                years.replace("yearly--on", "yearly--off");
+                professional.innerHTML = "$7/MONTH";
+                elite.innerHTML = "$14/MONTH";
+            }
+        };
+
+    </script>
+</body>
+
+</html>

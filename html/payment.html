@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link rel="stylesheet" href="../css/Global.css">
+    <script src="../js/Global.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4283c114de.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <nav>
+        <!-- Title -->
+        <div class="title_pos">
+          <h4>CW Design</h4>
+          <h4>CW Design</h4>
+        </div>
+        <div class="nav-items">
+          <li><a href="../html/home page.html" class="link">Home</a></li>
+          <li><a href="About.html" class="link">About</a></li>
+          <li><a href="contact.html" class="link">Contact</a></li>
+          <li><a href="Template.html" class="link">Templates</a></li>
+          <li><a href="plans.html" class="link">Plans and Pricing</a></li>
+          <li><a href="login.html" class="link">Login/Register</a></li>
+          <li><a href="#" class="link">Help</a></li>
+        </div>
+        <div class="right-nav">
+          <a href="Account.html">
+            <img class="logo-account" src="../image/UserAccountLogo.png" alt="">
+          </a>
+          <h5 id="Username"></h5>
+          </div>
+    
+        
+    
+    
+          
+          
+          
+    
+      </nav>
+
+
+    <div class="form">
+        <div class="main-form">
+            <div class="left-side">
+                <h1>Billing Address</h1>
+                <label for="input-name">Full Name :</label>
+                <input type="text" name="" id="input-name" placeholder="Qusai Othman" required>
+                <label for="input-email">Email :</label>
+                <input type="email" name="" id="input-email" placeholder="Example@company.com" required>
+                <label for="input-address">Address :</label>
+                <input type="text" name="" id="input-address" placeholder="120 W. 7th Street">
+                <label for="input-city">City :</label>
+                <input type="text" name="" id="input-city" placeholder="Amman" required>
+                <label for="input-state">State :</label>
+                <input type="text" name="" id="input-state" placeholder="NY" required>
+                <label for="input-zipCode">Zip Code :</label>
+                <input type="number" name="" id="input-zipCode" placeholder="11118" required>
+            </div>
+            <div class="right-side">
+                <h1>Payment</h1>
+                <label for="pay-logo">Accepted Card :</label>
+                <input type="image" id="pay-logo" src="../image/payment-logo.png" alt=""
+                    style="width: 150px; margin-top: 10px; margin-bottom: 10px;">
+                <label for="input-card-Name">Name on Card :</label>
+                <input type="text" name="" id="input-card-Name" placeholder="Qusai Othman" required>
+                <label for="input-card-num">Card Number :</label>
+                <input type="text" name="" id="input-card-num" placeholder="1111-2222-3333-4444" required>
+                <label for="input-exp-month">Exp. Month-Year :</label>
+                <input type="month" name="" id="input-exp-month" placeholder="September 2030" required>
+                <label for="input-CVV">CVV :</label>
+                <input type="text" name="" id="input-CVV" placeholder="879" required>
+            </div>
+        </div>
+        <div class="footer-form">
+            <button class="btn-pay">Pay Now</button>
+            <button class="btn-back">Go back</button>
+        </div>
+
+    </div>
+    
+
+
+
+    <style>
+        * {
+            font-family: cursive;
+        }
+
+        body {
+            display: grid;
+            place-items: center;
+            background-color: #28f6c2;
+        }
+
+        .form {
+            margin-top: 100px;
+            width: 650px;
+            height: 550px;
+            background-color: #000000;
+            border-radius: 20px;
+            box-shadow: 2px 2px 40px #28f6c2;
+            color: #28f6c2;
+
+        }
+
+        .main-form {
+
+            display: flex;
+            flex-direction: row;
+            margin-top: 40px;
+
+        }
+
+        .left-side {
+            margin-left: 30px;
+            margin-right: 25px;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            width: 325px;
+        }
+
+        .right-side {
+            margin-left: 25px;
+            margin-right: 30px;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            width: 325px;
+        }
+
+        label {
+            font-weight: bold;
+            margin-top: 6px;
+            margin-bottom: 4px;
+            font-size: 1rem;
+            background: transparent;
+
+        }
+
+        input {
+
+            background: transparent;
+            border-top: 0;
+            border-left: 0;
+            border-right: 0;
+            color: darkgrey;
+        }
+
+        .footer-form {
+            margin-top: 25px;
+            display: grid;
+            place-items: center;
+        }
+
+        .btn-pay,
+        .btn-back {
+            width: 590px;
+            height: 38px;
+            margin-left: 30px;
+            margin-right: 30px;
+            border-radius: 20px;
+            background: transparent;
+            font-size: 1rem;
+            border: 0;
+            color: #28f6c2;
+            cursor: pointer;
+            border:2px solid #28f6c2;
+        }
+
+        .btn-back {
+            margin-top: 20px;
+        }
+
+        .btn-pay:hover,
+        .btn-back:hover {
+            background: #28f6c2;
+            color: #000000;
+        }
+    </style>
+    <script>
+
+
+        document.querySelector('.btn-pay').addEventListener('click', (e) => {
+            const requiredFields = document.querySelectorAll('input[required]');
+            let allFilled = true;
+
+            requiredFields.forEach(field => {
+                if (!field.value) {
+                    allFilled = false;
+                    field.style.borderBottom = '2px solid red';
+                } else {
+                    field.style.borderBottom = '1px solid black';
+                }
+            });
+
+            if (allFilled) {
+                const billingDetails = {
+                    name: document.getElementById('input-name').value,
+                    email: document.getElementById('input-email').value,
+                    address: document.getElementById('input-address').value,
+                    city: document.getElementById('input-city').value,
+                    state: document.getElementById('input-state').value,
+                    zipCode: document.getElementById('input-zipCode').value,
+                    cardName: document.getElementById('input-card-Name').value,
+                    cardNumber: document.getElementById('input-card-num').value,
+                    expMonthYear: document.getElementById('input-exp-month').value,
+                    cvv: document.getElementById('input-CVV').value
+                };
+
+                localStorage.setItem('billingDetails', JSON.stringify(billingDetails));
+                window.location.href = 'confirm payment.html';
+            }
+        });
+
+        document.querySelector('.btn-back').addEventListener('click', (e) => {
+            window.location.href = '../html/plans.html';
+        });
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plans</title>
+    <link rel="stylesheet" href="../css/Global.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4283c114de.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <nav>
+        <!-- Title -->
+        <div class="title_pos">
+          <h4>CW Design</h4>
+          <h4>CW Design</h4>
+        </div>
+        <div class="nav-items">
+          <li><a href="../html/home page.html" class="link">Home</a></li>
+          <li><a href="About.html" class="link">About</a></li>
+          <li><a href="contact.html" class="link">Contact</a></li>
+          <li><a href="Template.html" class="link">Templates</a></li>
+          <li><a href="plans.html" class="link">Plans and Pricing</a></li>
+          <li><a href="login.html" class="link">Login/Register</a></li>
+          <li><a href="Help.html" class="link">Help</a></li>
+        </div>
+        <div class="right-nav">
+          <a href="Account.html">
+            <img class="logo-account" src="../image/UserAccountLogo.png" alt="">
+          </a>
+          <h5 id="Username"></h5>
+          </div>
+
+      </nav>
+
+
+    <div class="container">
+        <h2>Choose your Plan</h2>
+        <div class="currency-selector">
+            <label for="currency">Select Currency: </label>
+            <select id="currency" onchange="updateCurrency(this.value)">
+                <option value="USD">USD</option>
+                <option value="JOR">JOR</option>
+                <option value="EUR">EUR</option>
+
+            </select>
+        </div>
+        <div class="price-tabs">
+            <button class="tab monthly-tab active" onclick="showTab('monthly')">Monthly</button>
+            <button class="tab yearly-tab" onclick="showTab('yearly')">Yearly</button>
+        </div>
+        <div class="price-row monthly">
+            <div class="price-col">
+                <p>Basic</p>
+                <h3 data-original-price="3.99">$3.99<span class="currency">/month</span></h3>
+                <ul>
+                    <li>1 Website</li>
+                    <li>10 GB Disk Space</li>
+                    <li>Free Email Address</li>
+                    <li>Basic Web Builder</li>
+                    <li>No SSL Certificate</li>
+                    <li>Limited Support</li>
+                </ul>
+                <button class="btn-card">Add To Cart</button>
+            </div>
+            <div class="price-col">
+                <p>Advanced</p>
+                <h3 data-original-price="9.99">$9.99<span class="currency">/month</span></h3>
+                <ul>
+                    <li>3 Websites</li>
+                    <li>30 GB Disk Space</li>
+                    <li>Free Email Addresses</li>
+                    <li>Advanced Web Builder</li>
+                    <li>SSL Certificate</li>
+                    <li>24/7 Support</li>
+                </ul>
+                <button class="btn-card">Add To Cart</button>
+            </div>
+            <div class="price-col">
+                <p>Premium</p>
+                <h3 data-original-price="24.99">$24.99<span class="currency">/month</span></h3>
+                <ul>
+                    <li>Unlimited Websites</li>
+                    <li>100 GB Disk Space</li>
+                    <li>Free Email Addresses</li>
+                    <li>Premium Web Builder</li>
+                    <li>SSL Certificate</li>
+                    <li>24/7 Premium Support</li>
+                </ul>
+                <button class="btn-card">Add To Cart</button>
+            </div>
+        </div>
+        <div class="price-row yearly" style="display: none;">
+            <!-- Yearly pricing content here -->
+            <div class="price-col">
+                <p>Basic</p>
+                <h3 data-original-price="39.99">$39.99<span class="currency">/year</span></h3>
+                <ul>
+                    <li>1 Website</li>
+                    <li>10 GB Disk Space</li>
+                    <li>Free Email Address</li>
+                    <li>Basic Web Builder</li>
+                    <li>No SSL Certificate</li>
+                    <li>Limited Support</li>
+                </ul>
+                <button class="btn-card">Add To Cart</button>
+            </div>
+            <div class="price-col">
+                <p>Advanced</p>
+                <h3 data-original-price="99.99">$99.99<span class="currency">/year</span></h3>
+                <ul>
+                    <li>3 Websites</li>
+                    <li>30 GB Disk Space</li>
+                    <li>Free Email Addresses</li>
+                    <li>Advanced Web Builder</li>
+                    <li>SSL Certificate</li>
+                    <li>24/7 Support</li>
+                </ul>
+                <button class="btn-card">Add To Cart</button>
+            </div>
+            <div class="price-col">
+                <p>Premium</p>
+                <h3 data-original-price="249.99">$249.99<span class="currency">/year</span></h3>
+                <ul>
+                    <li>Unlimited Websites</li>
+                    <li>100 GB Disk Space</li>
+                    <li>Free Email Addresses</li>
+                    <li>Premium Web Builder</li>
+                    <li>SSL Certificate</li>
+                    <li>24/7 Premium Support</li>
+                </ul>
+                <button class="btn-card">Add To Cart</button>
+            </div>
+        </div>
+    </div>
+        <!-- Footer -->
+        <footer>
+            <div class="footer__addr">
+                <h1 class="footer__logo">CW Design</h1>
+                <!-- Contact us / Address -->
+                <h2>Contact</h2>
+    
+                <address>
+    
+                    <a class="footer__btn" href="mailto:othmanq30@gmail.com">Email Us</a>
+                    <a class="footer__btn" href="tel:+962785151658">Call Us</a>
+                    Amman, Marj Al-Hamam, Jordan<br>
+                </address>
+            </div>
+    
+            <ul class="footer__nav">
+                <!-- Social Media -->
+                <li class="nav__item">
+                    <h2 class="nav__title">Follow us</h2>
+                    <ul class="Social">
+    
+                        <li>
+                            <a class="facebook" target="_blank" href="https://www.facebook.com/qusai.othman.02">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <i class="ri-facebook-fill"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="twitter" target="_blank" href="https://twitter.com/6xleee">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <i class="ri-twitter-x-fill"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="instagram" target="_blank" href="https://www.instagram.com/qusai.32r">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <i class="ri-instagram-fill"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="linkedin" target="_blank" href="https://www.linkedin.com/in/qusai-othman-629991282/">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <i class="ri-linkedin-fill"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <!-- News and info -->
+                <li class="nav__item">
+                    <h2 class="nav__title">News & Info</h2>
+    
+                    <ul class="nav__ul">
+                        <li>
+                            <a>Latest articles</a>
+                        </li>
+    
+                        <li>
+                            <a href="About.html">Team</a>
+                        </li>
+    
+                        <li>
+                            <a href="About.html">About us</a>
+                        </li>
+    
+                        <li>
+                            <a >News</a>
+                        </li>
+    
+                        <li>
+                            <a href="../html/Subscribe.html">Subscribe</a>
+                        </li>
+    
+    
+                    </ul>
+                </li>
+                <!-- Support / Legal -->
+                <li class="nav__item">
+                    <h2 class="nav__title">Support</h2>
+    
+                    <ul class="nav__ul">
+                        <li>
+                            <a href="Help.html">FAQ</a>
+                        </li>
+    
+                        <li>
+                            <a href="Help.html">Help</a>
+                        </li>
+                        <br>
+    
+                    </ul>
+                    <ul class="nav__ul">
+                        <h2 class="nav__title">Legal</h2>
+                        <li>
+                            <a>Terms of Use</a>
+                        </li>
+    
+                        <li>
+                            <a>Privacy and Policy</a>
+                        </li>
+    
+    
+                    </ul>
+    
+    
+                </li>
+            </ul>
+            <!-- copy right -->
+            <div class="legal">
+                <p>&copy; 2024 CW Design. All rights reserved.</p>
+    
+            </div>
+        </footer>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            /* font-family: 'Poppins', sans-serif; */
+        }
+
+        .container {
+            width: 100%;
+            min-height: 100vh;
+            background: #28f6c2;
+        }
+
+        .container h2 {
+            color: #000000;
+            font-size: 32px;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .currency-selector {
+            background: transparent;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .currency-selector label {
+            color: #000000;
+            margin-right: 5px;
+        }
+
+        .currency-selector select {
+            background: transparent;
+
+            padding: 5px;
+            font-size: 16px;
+            width: 70px;
+        }
+
+
+        .price-tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .tab {
+            background: transparent;
+            color: #000000;
+            font-size: 16px;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-bottom: 2px solid transparent;
+            transition: border-bottom 0.3s ease-in-out;
+        }
+
+        .tab:hover {
+            border-bottom: 2px solid #fff;
+        }
+
+        .tab.active {
+            border-bottom: 2px solid #000000;
+        }
+
+        .price-row {
+            width: 90%;
+            max-width: 1100px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-gap: 25px;
+        }
+
+        .price-col {
+            background: #000000;
+            padding: 10% 15%;
+            border-radius: 10px;
+            color: #fff;
+            text-align: center;
+        }
+
+        .price-col p {
+            font-size: 22px;
+        }
+
+        .price-col h3 {
+            font-size: 44px;
+            margin: 20px 0 40px;
+            font-weight: 500;
+        }
+
+        .price-col h3 span {
+            font-size: 16px;
+        }
+
+        .price-col ul {
+            text-align: left;
+            margin: 20px 0;
+            color: #ddd;
+            list-style: none;
+        }
+
+        .price-col ul li {
+            margin: 15px 0;
+        }
+
+        .price-col ul li::before {
+            content: '\2022';
+            color: #28f6c2;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+
+        .price-col button {
+            width: 100%;
+            padding: 14px 0;
+            background: transparent;
+            color: #fff;
+            font-size: 15px;
+            border: 1px solid #28f6c2;
+            border-radius: 6px;
+            margin-top: 30px;
+            cursor: pointer;
+            transition: background 0.5s;
+        }
+
+        .price-col button:hover {
+            background: #28f6c2;
+            color: #000000;
+        }
+
+        @media (max-width: 768px) {
+            .price-col {
+                padding: 20px;
+            }
+        }
+    </style>
+<script src="../js/Global.js"></script>
+
+    <script>
+        function showTab(tabName) {
+            const tabs = document.querySelectorAll('.tab');
+            tabs.forEach(tab => tab.classList.remove('active'));
+            const rows = document.querySelectorAll('.price-row');
+            rows.forEach(row => row.style.display = 'none');
+            document.querySelector(`.${tabName}-tab`).classList.add('active');
+            document.querySelector(`.${tabName}`).style.display = 'grid';
+        }
+
+        function updateCurrency(currency) {
+            const monthlyPrices = document.querySelectorAll('.monthly h3');
+            const yearlyPrices = document.querySelectorAll('.yearly h3');
+
+            monthlyPrices.forEach(price => {
+                const originalPrice = parseFloat(price.dataset.originalPrice);
+                const convertedPrice = convertCurrency(originalPrice, currency);
+                price.innerHTML = formatPrice(convertedPrice, currency) + '<span class="currency">/month</span>';
+            });
+
+            yearlyPrices.forEach(price => {
+                const originalPrice = parseFloat(price.dataset.originalPrice);
+                const convertedPrice = convertCurrency(originalPrice, currency);
+                price.innerHTML = formatPrice(convertedPrice, currency) + '<span class="currency">/year</span>';
+            });
+        }
+
+        function convertCurrency(amount, currency) {
+
+            const conversionRates = {
+                JOR: 0.71,
+                USD: 1,
+                EUR: 0.92
+
+            };
+
+            return amount * conversionRates[currency];
+        }
+
+        function formatPrice(price, currency) {
+            return currency + price.toFixed(2);
+        }
+
+        updateCurrency('USD');
+
+        document.querySelectorAll('.btn-card').forEach(button => {
+            button.addEventListener('click', () => {
+                window.location.href = '../html/payment.html';
+            });
+        });
+        document.querySelectorAll('.btn-card').forEach(button => {
+            button.addEventListener('click', (e) => {
+                const plan = e.target.closest('.price-col');
+                const planName = plan.querySelector('p').innerText;
+                const planPrice = plan.querySelector('h3').dataset.originalPrice;
+                const planDuration = document.querySelector('.tab.active').innerText.toLowerCase();
+                const currency = document.getElementById('currency').value;
+                const convertedPrice = convertCurrency(parseFloat(planPrice), currency);
+
+                const planDetails = {
+                    name: planName,
+                    price: convertedPrice.toFixed(2),
+                    duration: planDuration,
+                    currency: currency
+                };
+
+                localStorage.setItem('selectedPlan', JSON.stringify(planDetails));
+
+                window.location.href = '../html/payment.html';
+            });
+        });
+
+    </script>
+</body>
+
+</html>

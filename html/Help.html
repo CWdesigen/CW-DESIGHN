@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Global Style -->
+  <link rel="stylesheet" href="../css/Global.css">
+
+  <!-- Social Media Style -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/4283c114de.js" crossorigin="anonymous"></script>
+  <script src="../js/Global.js"></script>
+
+  <title>Help</title>
+</head>
+
+<body>
+  <!-- Nav bar -->
+
+  <nav>
+    <!-- Title -->
+    <div class="title_pos">
+      <h4>CW Design</h4>
+      <h4>CW Design</h4>
+    </div>
+    <div class="nav-items">
+      <li><a href="../html/home page.html" class="link">Home</a></li>
+      <li><a href="About.html" class="link">About</a></li>
+      <li><a href="contact.html" class="link">Contact</a></li>
+      <li><a href="Template.html" class="link">Templates</a></li>
+      <li><a href="plans.html" class="link">Plans and Pricing</a></li>
+      <li><a href="login.html" class="link">Login/Register</a></li>
+      <li><a href="Help.html" class="link">Help</a></li>
+    </div>
+    <div class="right-nav">
+      <a href="Account.html">
+        <img class="logo-account" src="../image/UserAccountLogo.png" alt="">
+      </a>
+      <h5 id="Username"></h5>
+      </div>
+
+  </nav>
+
+  <!-- Content -->
+  <div class="Content">
+    <header>
+        <h1>Help Center</h1>
+        <p>How can we assist you today?</p>
+        <input type="text" id="searchBar" placeholder="Search for help..." onkeyup="searchFunction()">
+        <i class="fa-solid fa-magnifying-glass" style="color: #000000;"></i>
+    </header>
+
+    <section id="faq">
+        <h2>Frequently Asked Questions</h2>
+
+        <div class="faq-item">
+            <button class="accordion">What is the purpose of this website?</button>
+            <div class="panel">
+                <p>This website allows users to create new web pages by viewing and downloading ready-made templates. 
+                    It's designed to help users build web pages quickly and efficiently using pre-designed layouts.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="accordion">What are the different pages on this website?</button>
+            <div class="panel">
+                <ul>
+                    <li><strong>Home Page:</strong> Displays a collection of templates for users to view and explore.
+                    </li>
+                    <li><strong>About Page:</strong> Provides an overview of the website, including its goals, vision,
+                        and the team behind it.</li>
+                    <li><strong>Contact Page:</strong> Allows users to reach out to support for assistance or inquiries.
+                    </li>
+                    <li><strong>Templates Page:</strong> Shows all available templates, allowing users to view, explore,
+                        and download them.</li>
+                    <li><strong>Plans Page:</strong> Lists subscription options, including both monthly and yearly
+                        plans, for accessing premium templates and features.</li>
+                    <li><strong>Login Page:</strong> Enables users to log in or create a new account to access
+                        personalized features and content.</li>
+                    <li><strong>Help Page:</strong> Provides detailed assistance to users through FAQs and a contact
+                        form.</li>
+                </ul>
+                <p>In addition, users can click on their profile picture at the top right corner of the page to view and
+                    manage their profile.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="accordion">How do I download a template?</button>
+            <div class="panel">
+                <p>You can download a template from the "Templates" page by clicking on the "Download" button next to
+                    the template you want. This will send you to a new page then copy the code to use.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="accordion">What are the subscription options?</button>
+            <div class="panel">
+                <p>The "Plans" page offers subscription options, including monthly and yearly plans. Subscribing gives
+                    you access to premium templates and additional features designed to enhance your web-building
+                    experience.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="accordion">How do I contact support?</button>
+            <div class="panel">
+                <p>You can reach out to our support team through the "Contact" page. Simply fill out the contact form
+                    with your details and message, or call our support line for immediate assistance.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="accordion">How do I manage my profile?</button>
+            <div class="panel">
+                <p>You can manage your profile by clicking on your profile picture in the top right corner of any page.
+                    This will take you to your profile page where you can update your information, view your downloads,
+                    and manage your subscription.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact-S">
+        <h2>Need further assistance?</h2>
+        <form id="contactForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+    </div>
+  </div>
+</body>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer__addr">
+          <h1 class="footer__logo">CW Design</h1>
+          <!-- Contact us / Address -->
+          <h2 style="color: #28f6c2;">Contact</h2>
+
+          <address>
+
+              <a class="footer__btn" href="mailto:othmanq30@gmail.com">Email Us</a>
+              <a class="footer__btn" href="tel:+962785151658">Call Us</a>
+              Amman, Marj Al-Hamam, Jordan<br>
+          </address>
+      </div>
+
+      <ul class="footer__nav">
+          <!-- Social Media -->
+          <li class="nav__item">
+              <h2 style="color: #28f6c2;" class="nav__title">Follow us</h2>
+              <ul class="Social">
+
+                  <li>
+                      <a class="facebook" target="_blank" href="https://www.facebook.com/qusai.othman.02">
+                          <span></span>
+                          <span></span>
+                          <span></span>
+                          <span></span>
+                          <i class="ri-facebook-fill"></i>
+                      </a>
+                  </li>
+                  <li>
+                      <a class="twitter" target="_blank" href="https://twitter.com/6xleee">
+                          <span></span>
+                          <span></span>
+                          <span></span>
+                          <span></span>
+                          <i class="ri-twitter-x-fill"></i>
+                      </a>
+                  </li>
+                  <li>
+                      <a class="instagram" target="_blank" href="https://www.instagram.com/qusai.32r">
+                          <span></span>
+                          <span></span>
+                          <span></span>
+                          <span></span>
+                          <i class="ri-instagram-fill"></i>
+                      </a>
+                  </li>
+                  <li>
+                      <a class="linkedin" target="_blank" href="https://www.linkedin.com/in/qusai-othman-629991282/">
+                          <span></span>
+                          <span></span>
+                          <span></span>
+                          <span></span>
+                          <i class="ri-linkedin-fill"></i>
+                      </a>
+                  </li>
+              </ul>
+          </li>
+          <!-- News and info -->
+          <li class="nav__item">
+              <h2 style="color: #28f6c2;" class="nav__title">News & Info</h2>
+
+              <ul class="nav__ul">
+                  <li>
+                      <a>Latest articles</a>
+                  </li>
+
+                  <li>
+                      <a href="About.html">Team</a>
+                  </li>
+
+                  <li>
+                      <a href="About.html">About us</a>
+                  </li>
+
+                  <li>
+                      <a >News</a>
+                  </li>
+
+                  <li>
+                      <a href="../html/Subscribe.html">Subscribe</a>
+                  </li>
+
+
+              </ul>
+          </li>
+          <!-- Support / Legal -->
+          <li class="nav__item">
+              <h2 style="color: #28f6c2;" class="nav__title">Support</h2>
+
+              <ul class="nav__ul">
+                  <li>
+                      <a href="Help.html">FAQ</a>
+                  </li>
+
+                  <li>
+                      <a href="Help.html">Help</a>
+                  </li>
+                  <br>
+
+              </ul>
+              <ul style="color: #28f6c2;" class="nav__ul">
+                  <h2 style="color: #28f6c2;" class="nav__title">Legal</h2>
+                  <li>
+                      <a>Terms of Use</a>
+                  </li>
+
+                  <li>
+                      <a>Privacy and Policy</a>
+                  </li>
+
+
+              </ul>
+
+
+          </li>
+      </ul>
+      <!-- copy right -->
+      <div class="legal">
+          <p>&copy; 2024 CW Design. All rights reserved.</p>
+
+      </div>
+  </footer>
+<style>
+    .Content {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #000000;
+        display: grid;
+        place-items: center;
+    }
+
+    header {
+        width: 100%;
+        text-align: center;
+        padding: 20px;
+        background-color: #28f6c2;
+        color: rgb(0, 0, 0);
+    }
+
+    #searchBar {
+        background-color: #000000;
+        color: white;
+        width: 30%;
+        padding: 10px;
+        margin-top: 20px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+
+    #faq,
+    #contact-S {
+        width: 60%;
+        padding: 20px;
+        background-color: #28f6c2;
+        margin: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+        color: #000000;
+        margin-bottom: 20px;
+    }
+
+    .accordion {
+        background-color: #28f6c2;
+        border: 1px solid black;
+        color: #444;
+        cursor: pointer;
+        padding: 15px;
+        width: 100%;
+        outline: none;
+        text-align: left;
+        font-size: 15px;
+        transition: 0.4s;
+        margin-bottom: 5px;
+        border-radius: 5px;
+
+    }
+
+    .accordion.active,
+    .accordion:hover {
+        background-color: #151515;
+        color: #28f6c2;
+    }
+
+    .panel {
+        padding: 10px 18px;
+        display: none;
+        background-color: #22ecb9;
+        overflow: hidden;
+        border-bottom: 1px solid #ddd;
+        border-radius: 5px;
+
+    }
+
+    #contactForm {
+        display: flex;
+        flex-direction: column;
+        border-radius: 5px;
+
+    }
+
+    #contactForm input,
+    #contactForm textarea {
+        background: transparent;
+        padding: 10px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        width: 100%;
+    }
+    #contactForm input:focus,
+    #contactForm textarea:focus{
+        background-color: #000000;
+        color: #28f6c2;
+    }
+    
+
+    #contactForm button {
+        padding: 10px;
+        font-weight: bold;
+        background-color: #28f6c2;
+        color: rgb(0, 0, 0);
+        border: 1px solid black;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    #contactForm button:hover {
+        background-color: black;
+        color: #22ecb9;
+    }
+</style>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const accordions = document.querySelectorAll(".accordion");
+        accordions.forEach(acc => {
+            acc.addEventListener("click", function () {
+                this.classList.toggle("active");
+                const panel = this.nextElementSibling;
+                panel.style.display = panel.style.display === "block" ? "none" : "block";
+            });
+        });
+    });
+
+    function searchFunction() {
+        const input = document.getElementById("searchBar");
+        const filter = input.value.toLowerCase();
+        const faqItems = document.querySelectorAll(".faq-item");
+
+        faqItems.forEach(item => {
+            const question = item.querySelector(".accordion").textContent;
+            if (question.toLowerCase().includes(filter)) {
+                item.style.display = "";
+            } else {
+                item.style.display = "none";
+            }
+        });
+    }
+
+</script>
+
+</body>
+
+</html>

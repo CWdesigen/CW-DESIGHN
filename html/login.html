@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+
+<body>
+    <form action="" class="login-form">
+        <h1>Login</h1>
+        <span class="span-logo">
+            <i class='bx bx-user'></i>
+            <input type="text" class="login-content user-input" placeholder="User Name" required>
+        </span>
+        <span class="span-logo">
+            <i class='bx bx-lock-alt'></i>
+            <input type="password" class="login-content password-input" placeholder="Password" required>
+            <i class='bx bx-show' id="show"></i>
+        </span>
+        <p><input type="checkbox" class="check-box"><span>Remember me</span></p>
+        <button class="login-btn">Login</button>
+        <div class="span-div">
+            <span class="span-account">Don't have an account? </span>
+            <a class="register" href="register.html"> Sing up and get started!</a>
+        </div>
+
+        </div>
+
+    </form>
+
+    <style>
+        @keyframes rainbow-border {
+            0% {
+                border-color: red;
+            }
+
+            25% {
+                border-color: yellow;
+            }
+
+            50% {
+                border-color: green;
+            }
+
+            75% {
+                border-color: blue;
+            }
+
+            100% {
+                border-color: red;
+            }
+        }
+
+        @keyframes border-style {
+
+
+            0% {
+
+                border-bottom-style: solid;
+                border-bottom-width: 1px;
+            }
+
+            25% {
+                border-left-style: solid;
+                border-left-width: 1px;
+            }
+
+            50% {
+                border-top-style: solid;
+                border-top-width: 1px;
+            }
+
+            75% {
+                border-right-style: solid;
+                border-right-width: 1px;
+            }
+        }
+
+        @keyframes shadow {
+            0% {
+                box-shadow: 2px 2px 20px 3px #0db566;
+            }
+
+            3% {
+                box-shadow: 2px 2px 20px 3px #710d0d;
+            }
+
+            6% {
+                box-shadow: 2px 2px 20px 3px #650d71;
+            }
+
+            8% {
+                box-shadow: 2px 2px 20px 3px #c0304d;
+            }
+
+            11% {
+                box-shadow: 2px 2px 20px 3px #91cb0a;
+            }
+
+            14% {
+                box-shadow: 2px 2px 20px 3px #a28b08;
+            }
+
+            19% {
+                box-shadow: 2px 2px 20px 3px #3a135a;
+            }
+
+            22% {
+                box-shadow: 2px 2px 20px 3px #47099e;
+            }
+
+            26% {
+                box-shadow: 2px 2px 20px 3px #e917aa;
+            }
+
+            30% {
+                box-shadow: 2px 2px 20px 3px #cb0a7b;
+            }
+
+            35% {
+                box-shadow: 2px 2px 20px 3px #09ff3e;
+            }
+
+            39% {
+                box-shadow: 2px 2px 20px 3px #cb6a0a;
+            }
+
+            43% {
+                box-shadow: 2px 2px 20px 3px #cb310a;
+            }
+
+            47% {
+                box-shadow: 2px 2px 20px 3px #0acb51;
+            }
+
+            50% {
+                box-shadow: 2px 2px 20px 3px #4c5e23;
+            }
+
+            54% {
+                box-shadow: 2px 2px 20px 3px #4e193c;
+            }
+
+            58% {
+                box-shadow: 2px 2px 20px 3px saddlebrown;
+            }
+
+            63% {
+                box-shadow: 2px 2px 20px 3px rgb(45, 25, 77);
+            }
+
+            67% {
+                box-shadow: 2px 2px 20px 3px rgb(51, 54, 44);
+            }
+
+            70% {
+                box-shadow: 2px 2px 20px 3px #24424c;
+            }
+
+            74% {
+                box-shadow: 2px 2px 20px 3px #ff0000;
+            }
+
+            77% {
+                box-shadow: 2px 2px 20px 3px #ff8800;
+            }
+
+            80% {
+                box-shadow: 2px 2px 20px 3px #fffb00;
+            }
+
+            83% {
+                box-shadow: 2px 2px 20px 3px #88ff00;
+            }
+
+            87% {
+                box-shadow: 2px 2px 20px 3px #00ffe5;
+            }
+
+            90% {
+                box-shadow: 2px 2px 20px 3px #04b4ff;
+            }
+
+            94% {
+                box-shadow: 2px 2px 20px 3px #0037ff;
+            }
+
+            98% {
+                box-shadow: 2px 2px 20px 3px rgb(255, 0, 187);
+            }
+        }
+
+        @keyframes shadow-hover {
+            0% {
+                margin: -10px;
+                box-shadow: 2px 2px 20px 3px #0acb51;
+            }
+
+            25% {
+                margin-right: 100px;
+                animation-play-state: paused;
+                box-shadow: 2px 2px 20px 10px palevioletred;
+            }
+
+            50% {
+                box-shadow: 2px 2px 20px 10px #ff0000;
+                margin-top: 100px;
+                animation-play-state: paused;
+            }
+
+            75% {
+                box-shadow: 2px 2px 20px 10p #ff8800;
+                margin-bottom: 5px;
+                margin-left: 200px;
+            }
+
+            100% {
+                box-shadow: 2px 2px 20px 10px #8e068e;
+                margin-right: 2px;
+                margin-bottom: 200px;
+            }
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+                margin: -10px;
+                box-shadow: 2px 2px 20px 3px #0acb51;
+
+            }
+
+            100% {
+                transform: rotate(360deg);
+                box-shadow: 2px 2px 20px 10px #8e068e;
+                margin-right: 2px;
+                margin-bottom: 200px;
+            }
+        }
+
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #000000;
+            color: black;
+            display: grid;
+            place-items: center;
+            font-family: cursive;
+            /* background: linear-gradient(45deg, rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5), rgba(255, 0, 0, 0.5), rgba(0, 255, 0, 0.5)); */
+            background-repeat: no-repeat;
+            background-size: 200% 200%;
+            /* animation: gradient-animation 10s infinite alternate; */
+        }
+
+        @keyframes gradient-animation {
+            0% {
+                background-position: 0% 0%;
+            }
+
+            25% {
+                background-position: 100% 0%;
+            }
+
+            50% {
+                background-position: 100% 100%;
+            }
+
+            75% {
+                background-position: 0% 100%;
+            }
+
+            100% {
+                background-position: 0% 0%;
+            }
+        }
+
+
+
+        .login-form {
+            color: #28f6c2;
+            margin: 6% auto;
+            text-align: center;
+            display: grid;
+            place-items: center;
+            /* background-color: black; */
+            width: 400px;
+            height: 400px;
+            padding: 5px;
+            border-radius: 30px;
+            /* animation: shadow 50s infinite linear; */
+            box-shadow: 2px 2px 20px 3px #28f6c2;
+        }
+
+
+
+        .login-content {
+            width: 50%;
+            padding: 10px 0;
+            margin: 5px 0;
+            border-left: 0;
+            border-top: 0;
+            border-right: 0;
+            border-bottom: 1px solid #999;
+            outline: none;
+            /* background: transparent; */
+
+        }
+
+        input {
+            background: transparent;
+            color: #999;
+        }
+
+        p {
+            font-size: 10px;
+        }
+
+        span {
+            color: #777;
+            font-size: 12px;
+        }
+
+        .span-logo {
+            width: 400px;
+            display: block;
+            justify-content: center;
+
+        }
+
+
+        #show {
+            cursor: pointer;
+        }
+
+        .login-btn {
+            cursor: pointer;
+            border: 2px solid #00ffe5;
+
+            width: 80px;
+            height: 30px;
+            background: transparent;
+
+            font-family: cursive;
+            color: #00ffe5;
+
+
+
+        }
+
+        .login-btn:hover {
+
+            background-color: #00ffe5;
+            color: #000000;
+
+        }
+
+        .span-div {
+            padding-bottom: 20px;
+        }
+
+        .register {
+            color: #0f8ec4;
+            font-size: 12px;
+
+        }
+    </style>
+    <script>
+        const form = document.querySelector('form');
+        const username = document.querySelector('.user-input');
+        const password = document.querySelector('.password-input');
+        const showPassword = document.querySelector('#show');
+        let isClicked = true;
+
+        showPassword.addEventListener('click', () => {
+            if (password.value && isClicked) {
+                password.setAttribute("type", "text");
+                showPassword.setAttribute('class', 'bx bx-hide');
+                isClicked = false;
+            } else if (password.value && !isClicked) {
+                password.setAttribute("type", "password");
+                showPassword.setAttribute('class', 'bx bx-show');
+                isClicked = true;
+            }
+        });
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const requiredFields = document.querySelectorAll('input[required]');
+            let allFilled = true;
+            requiredFields.forEach(field => {
+                if (!field.value) {
+                    allFilled = false;
+                }
+            });
+
+            if (allFilled) {
+                const loginDetails = {
+                    username: username.value
+                };
+                localStorage.setItem('loginDetails', JSON.stringify(loginDetails));
+                window.location.href = 'home page.html';
+            }
+        });
+    </script>
+
+
+
+
+</body>
+
+</html>

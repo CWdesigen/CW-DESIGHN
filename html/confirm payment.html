@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirm Payment</title>
+</head>
+
+<body>
+    <div class="form">
+        <div class="main-form">
+            <div class="header-form">
+                <h1>Finishing up</h1>
+                <h3>Double-check everything looks OK before confirming.</h3>
+            </div>
+            <div class="content-form">
+                <h4 id="plan-title"> Your plan is : </h4>
+                <h4 id="plan-price">Plan price is :</h4>
+                <hr>
+                <h4 id="account-name">Your name in card is :</h4>
+                <h4 id="card-number">Your card number is :</h4>
+                <h4 id="account-email">Your Email is :</h4>
+                <!-- <h4 id="total-title"></h4> -->
+                <h4 id="total-price">Total : </h4>
+            </div>
+            <div class="footer-form">
+                <button class="confirm-btn">Confirm Payment</button>
+                <button class="back-btn">Go Back</button>
+            </div>
+            
+        </div>
+
+        <style>
+            * {
+                font-family: cursive;
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                display: grid;
+                place-items: center;
+                background-color: #000000;
+            }
+
+            .form {
+                color: #ffffff;
+                margin-top: 100px;
+                width: 800px;
+                height: 550px;
+                background: transparent;
+                border-radius: 20px;
+                box-shadow: 2px 2px 20px 3px #28f6c2;
+
+            }
+
+            .main-form {
+                display: flex;
+                flex-direction: column;
+                
+
+            }
+
+            .main-form .header-form {
+                text-align: center;
+                margin-top: 50px;
+                margin-bottom: 40px;
+                font-weight: bold;
+            }
+
+            .main-form .header-form h1 {
+                margin-bottom: 30px;
+            }
+
+            .main-form .content-form {
+                margin-left: 50px;
+                margin-right: 50px;
+                display: flex;
+                flex-direction: column;
+            }
+            .main-form .content-form h4{
+                padding: 10px;
+                
+            }
+
+            hr {
+                margin: 0 1rem;
+                border: none;
+                border-top: 1px solid gray;
+
+            }
+
+            .footer-form {
+                margin-top: 15px;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+
+            }
+            button{
+                background: transparent;
+                margin-left: 30px;
+                margin-right: 30px;
+                margin-bottom: 15px;
+                height: 30px;
+                border-radius: 20px;
+                border: 2px solid #28f6c2;
+                color:#28f6c2;
+
+            }
+            button:hover{
+                background-color: #28f6c2;
+                color:#000000;
+            }
+        </style>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const planDetails = JSON.parse(localStorage.getItem('selectedPlan'));
+                const billingDetails = JSON.parse(localStorage.getItem('billingDetails'));
+
+                if (planDetails && billingDetails) {
+                    document.getElementById('plan-title').innerText += ' ' + planDetails.name + ' (' + planDetails.duration + ')';
+                    document.getElementById('plan-price').innerText += ' ' + planDetails.price + planDetails.currency + ' / ' + planDetails.duration;
+                    document.getElementById('total-price').innerText += ' ' + planDetails.currency + planDetails.price;
+                    document.getElementById('account-name').innerText += ' ' + billingDetails.cardName;
+                    document.getElementById('account-email').innerText += ' ' + billingDetails.email;
+                    document.getElementById('card-number').innerText += ' ' + billingDetails.cardNumber;
+                }
+            });
+
+            const confirmBtn =document.querySelector('.confirm-btn').addEventListener('click', () => {
+                alert('Your purchase has been completed successfully!!')
+
+                window.location.href='../html/home page.html';
+            });
+            const backBtn = document.querySelector('.back-btn').addEventListener('click', () =>{
+                window.location.href='../html/payment.html';
+            });
+        </script>
+</body>
+
+</html>
