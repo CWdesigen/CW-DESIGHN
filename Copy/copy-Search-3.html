@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+</head>
+
+<body>
+   
+    <button onclick="copyCode()">Copy</button>
+
+   <xmp id="copy-code">
+    <!DOCTYPE html>
+    <html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Search Bar</title>
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    
+    <body>
+        <div class="inputBox">
+            <input required="" type="text">
+            <span>Search..</span>
+        </div>
+        <style>
+            body {
+                background-color: black;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+    
+            }
+    
+            .inputBox {
+                position: relative;
+            }
+    
+            .inputBox input {
+                padding: 15px 20px;
+                outline: none;
+                background: transparent;
+                border-radius: 5px;
+                color: #fff;
+                border: 2px solid#ffffff;
+                font-size: 1em;
+                font-family: 'Courier New', Courier, monospace;
+            }
+    
+            .inputBox span {
+                position: absolute;
+                left: 0;
+                padding: 15px 20px;
+                pointer-events: none;
+                font-size: 1em;
+                transition: 0.4s cubic-bezier(0.05, 0.81, 0, 0.93);
+                color: #fffefe;
+                letter-spacing: 0.1em;
+            }
+    
+            .inputBox input:focus~span,
+            .inputBox input:valid~span {
+                font-size: 0.7em;
+                transform: translateX(14px) translateY(-7.5px);
+                padding: 0 5px;
+                border-radius: 2px;
+                background: #212121;
+                letter-spacing: 0em;
+                border: 2px solid #ffffff;
+            }
+        </style>
+    </body>
+    
+    </html>
+   </xmp>
+   <style>
+    body {
+        background-color: #000000;
+        color: white;
+        margin: 20px;
+    }
+    button{
+        background: transparent;
+        color: #28f2c2;
+        border: 1px solid #28f2c2;
+        width: 100%;
+        font-size: 30px;
+        padding: 15px;
+        cursor: pointer;
+    }
+    button:hover{
+        color: #000000;
+        background-color: #28f2c2;
+    }
+    xmp{
+        border: 2px solid #28f2c2;
+        padding: 20px;
+    }
+   </style>
+   <script>
+    function copyCode() {
+        var codeBlock = document.getElementById("copy-code").innerText;
+
+        var tempElement = document.createElement("textarea");
+        tempElement.value = codeBlock;
+        document.body.appendChild(tempElement);
+
+        tempElement.select();
+        document.execCommand("copy");
+
+        document.body.removeChild(tempElement);
+
+        alert("Copied");
+    }
+</script>
+
+</body>
+
+</html>

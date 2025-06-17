@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button</title>
+</head>
+
+<body>
+   
+    <button onclick="copyCode()">Copy</button>
+
+   <xmp id="copy-code">
+    <!-- HTML !-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button class="btn" role="button">Button</button>
+
+    <style>
+        /* CSS */
+        body{
+            background-color: rgb(0, 0, 0);
+            display: grid;
+            place-items: center;
+            width: 99%;
+            height: 97vh;
+            
+        }
+        .btn {
+           
+            --b: 3px;
+            /* border thickness */
+            --s: .45em;
+            /* size of the corner */
+            --color: #ffffff;
+
+            padding: calc(.5em + var(--s)) calc(.9em + var(--s));
+            color: var(--color);
+            --_p: var(--s);
+            background:
+                conic-gradient(from 90deg at var(--b) var(--b), #0000 90deg, var(--color) 0) var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+            transition: .3s linear, color 0s, background-color 0s;
+            outline: var(--b) solid #0000;
+            outline-offset: .6em;
+            font-size: 16px;
+
+            border: 0;
+
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+        }
+
+        .btn:hover,
+        .btn:focus-visible {
+            --_p: 0px;
+            outline-color: var(--color);
+            outline-offset: .05em;
+        }
+
+        .btn:active {
+            background: var(--color);
+            color: #000000;
+        }
+    </style>
+
+</body>
+
+</html>
+   </xmp>
+   <style>
+    body {
+        background-color: #000000;
+        color: white;
+        margin: 20px;
+    }
+    button{
+        background: transparent;
+        color: #28f2c2;
+        border: 1px solid #28f2c2;
+        width: 100%;
+        font-size: 30px;
+        padding: 15px;
+        cursor: pointer;
+    }
+    button:hover{
+        color: #000000;
+        background-color: #28f2c2;
+    }
+    xmp{
+        border: 2px solid #28f2c2;
+        padding: 20px;
+    }
+   </style>
+   <script>
+    function copyCode() {
+        var codeBlock = document.getElementById("copy-code").innerText;
+
+        var tempElement = document.createElement("textarea");
+        tempElement.value = codeBlock;
+        document.body.appendChild(tempElement);
+
+        tempElement.select();
+        document.execCommand("copy");
+
+        document.body.removeChild(tempElement);
+
+        alert("Copied");
+    }
+</script>
+
+</body>
+
+</html>

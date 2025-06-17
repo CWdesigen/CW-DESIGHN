@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login/Register</title>
+</head>
+
+<body>
+   
+    <button onclick="copyCode()">Copy</button>
+
+   <xmp id="copy-code">
+    <!DOCTYPE html>
+    <html lang="en">
+    
+    <head>
+        <title>Login</title>
+    </head>
+    
+    <body>
+    
+        <div class="main">
+            
+    
+                <div class="form">
+                    <h2>Login Now</h2>
+                    <input type="email" name="email" placeholder="Email address">
+                    <input type="password" name="" placeholder="Password">
+                    <button class="btnn"><a href="#">Login</a></button>
+    
+                    <p class="link">Don't have an account<br>
+                        <a href="#">Sign up </a> here</a>
+                    </p>
+                    <p class="liw">Or log in with</p>
+    
+                    <div class="icons">
+                        <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+                        <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+                        <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+                        <a href="#"><ion-icon name="logo-google"></ion-icon></a>
+                        <a href="#"><ion-icon name="logo-skype"></ion-icon></a>
+                    </div>
+    
+                </div>
+            
+        </div>
+        
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                
+            }
+           
+    
+            .main {
+                width: 100%;
+                background-position: center;
+                background-size: cover;
+                height: 100vh;
+               
+                display: grid;
+                place-items: center;
+                background-color: black ;
+            }
+    
+            .form {
+                
+                width: 250px;
+                height: 380px;
+                background-color: #7d4b22;
+                position: absolute;
+                border-radius: 10px;
+                padding: 25px;
+            }
+    
+            .form h2 {
+                width: 220px;
+                font-family: sans-serif;
+                text-align: center;
+                color: #ff7200;
+                font-size: 22px;
+                background-color: #fff;
+                border-radius: 10px;
+                margin: 2px;
+                padding: 8px;
+            }
+    
+            .form input {
+                width: 240px;
+                height: 35px;
+                background: transparent;
+                border-bottom: 1px solid #ff7200;
+                border-top: none;
+                border-right: none;
+                border-left: none;
+                color: #fff;
+                font-size: 15px;
+                letter-spacing: 1px;
+                margin-top: 30px;
+                font-family: sans-serif;
+            }
+    
+            .form input:focus {
+                outline: none;
+            }
+    
+            ::placeholder {
+                color: #fff;
+                font-family: Arial;
+            }
+    
+            .btnn {
+                width: 240px;
+                height: 40px;
+                background: #ff7200;
+                border: none;
+                margin-top: 30px;
+                font-size: 18px;
+                border-radius: 10px;
+                cursor: pointer;
+                color: #fff;
+                transition: 0.4s ease;
+            }
+    
+            .btnn:hover {
+                background: #fff;
+                color: #ff7200;
+            }
+    
+            .btnn a {
+                text-decoration: none;
+                color: #000;
+                font-weight: bold;
+            }
+    
+            .form .link {
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 17px;
+                padding-top: 20px;
+                text-align: center;
+            }
+    
+            .form .link a {
+                text-decoration: none;
+                color: #ff7200;
+            }
+    
+            .liw {
+                padding-top: 15px;
+                padding-bottom: 10px;
+                text-align: center;
+            }
+    
+            .icons a {
+                text-decoration: none;
+                color: #fff;
+            }
+    
+            .icons ion-icon {
+                color: #fff;
+                font-size: 30px;
+                padding-left: 14px;
+                padding-top: 5px;
+                transition: 0.3s ease;
+            }
+    
+            .icons ion-icon:hover {
+                color: #ff7200;
+            }
+        </style>
+        <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    </body>
+    
+    </html>
+   </xmp>
+   <style>
+    body {
+        background-color: #000000;
+        color: white;
+        margin: 20px;
+    }
+    button{
+        background: transparent;
+        color: #28f2c2;
+        border: 1px solid #28f2c2;
+        width: 100%;
+        font-size: 30px;
+        padding: 15px;
+        cursor: pointer;
+    }
+    button:hover{
+        color: #000000;
+        background-color: #28f2c2;
+    }
+    xmp{
+        border: 2px solid #28f2c2;
+        padding: 20px;
+    }
+   </style>
+   <script>
+    function copyCode() {
+        var codeBlock = document.getElementById("copy-code").innerText;
+
+        var tempElement = document.createElement("textarea");
+        tempElement.value = codeBlock;
+        document.body.appendChild(tempElement);
+
+        tempElement.select();
+        document.execCommand("copy");
+
+        document.body.removeChild(tempElement);
+
+        alert("Copied");
+    }
+</script>
+
+</body>
+
+</html>

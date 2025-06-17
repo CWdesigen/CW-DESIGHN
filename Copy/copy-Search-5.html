@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+</head>
+
+<body>
+   
+    <button onclick="copyCode()">Copy</button>
+
+   <xmp id="copy-code">
+    <!DOCTYPE html>
+    <html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Animated Search Bar</title>
+        <link rel="preload" href="styles.css">
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://kit.fontawesome.com/e3533db47c.js" crossorigin="anonymous"></script>
+    </head>
+    
+    <body>
+        <div class="container">
+            <div class="search-bar-container">
+                <input type="text" placeholder="Search" class="search-input">
+                <div class="btn">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+        </div>
+        <style>
+            body {
+                margin: 0px;
+                padding: 0px;
+                box-sizing: border-box;
+                clear: both;
+                background-color: #000;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+            }
+    
+            .search-bar-container {
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+    
+            .search-input {
+                width: 0px;
+                border-radius: 50px;
+                background-color: #fff;
+                padding: 0px;
+                box-sizing: border-box;
+                height: 50px;
+                border: 0px;
+                transition: all 0.7s ease;
+                font-size: 17px;
+            }
+    
+            ::placeholder {
+                color: gray;
+            }
+    
+            .search-input:focus,
+            .search-input:focus-visible,
+            .search-input:focus-visible {
+                outline: 0px;
+            }
+    
+            .btn {
+                width: 60px;
+                height: 60px;
+                border-radius: 60px;
+                background-color: #f0c006;
+                color: #fff;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                transform: translateX(-40px);
+            }
+    
+            .btn i {
+                transition: all 0.7s ease;
+            }
+    
+            .container:hover input {
+                width: 300px;
+                padding: 0 15px;
+            }
+    
+            .container:hover i {
+                transform: rotate(-350deg);
+            }
+        </style>
+    </body>
+    
+    </html>
+   </xmp>
+   <style>
+    body {
+        background-color: #000000;
+        color: white;
+        margin: 20px;
+    }
+    button{
+        background: transparent;
+        color: #28f2c2;
+        border: 1px solid #28f2c2;
+        width: 100%;
+        font-size: 30px;
+        padding: 15px;
+        cursor: pointer;
+    }
+    button:hover{
+        color: #000000;
+        background-color: #28f2c2;
+    }
+    xmp{
+        border: 2px solid #28f2c2;
+        padding: 20px;
+    }
+   </style>
+   <script>
+    function copyCode() {
+        var codeBlock = document.getElementById("copy-code").innerText;
+
+        var tempElement = document.createElement("textarea");
+        tempElement.value = codeBlock;
+        document.body.appendChild(tempElement);
+
+        tempElement.select();
+        document.execCommand("copy");
+
+        document.body.removeChild(tempElement);
+
+        alert("Copied");
+    }
+</script>
+
+</body>
+
+</html>

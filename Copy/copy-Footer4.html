@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footer</title>
+</head>
+
+<body>
+
+    <button onclick="copyCode()">Copy</button>
+
+    <xmp id="copy-code">
+        <!DOCTYPE html>
+        <html lang="en">
+
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Footer</title>
+
+
+            <link rel="stylesheet"
+                href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+            <link rel="preconnect" href="https://fonts.gstatic.com">
+            <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet">
+            <style>
+                * {
+                    margin: 0;
+                    padding: 0;
+                    overflow-x: hidden;
+                }
+
+
+
+
+                .major {
+                    background-color: rgb(98, 98, 98);
+                    height: 100vh;
+                }
+
+                /*caraosal css*/
+
+                *,
+                *::before,
+                *::after {
+                    box-sizing: border-box;
+                }
+
+
+                .footer {
+                    background: #000;
+                    padding: 30px 0px;
+                    font-family: 'Play', sans-serif;
+                    margin-top: 35%;
+                }
+
+                .footer .column {
+                    width: 20%;
+                    margin: 0% 1%;
+                    display: inline-block;
+                }
+
+                .footer .column ul {
+                    width: 100%;
+                }
+
+                .footer .column ul li {
+                    list-style: none;
+                    padding: 5px 0px;
+                    color: gray;
+                }
+
+                .footer .column ul li a {
+                    text-decoration: none;
+                    font-size: 1em;
+                    color: gray;
+                    transition: 0.5s;
+                }
+
+                .footer .column ul li a:hover {
+                    color: #f7bd00;
+                }
+
+                .footer .column ul .title {
+                    font-family: 'Fredoka One', cursive;
+                    font-size: 1.2em;
+                    color: #fff;
+                }
+
+                .footer .column ul li input {
+                    padding: 10px 5px;
+                    outline: none;
+                    border: 0;
+                    width: 70%;
+                    height: 40px;
+                    color: #1e1e1e;
+                }
+
+                .footer .column ul li .btn1 {
+                    outline: none;
+                    border: 0;
+                    padding: 5px;
+                    color: #fff;
+                    height: 44px;
+                    position: relative;
+                    top: 1px;
+                    font-size: 0.5em;
+                    background: #f7bd00;
+                }
+
+                .footer .column ul li i {
+                    font-size: 2em;
+                    margin: 0px 10px;
+                }
+
+                .sub-footer {
+                    background: #1e1e1e;
+                    padding: 5px 0px;
+                    text-align: center;
+                    color: gray;
+                    font-size: 12px;
+                    font-family: 'Play', sans-serif;
+                }
+
+                @media (max-width:720px) {
+                    .footer .column {
+                        width: 90%;
+                        display: block;
+                        margin: 0% 0%;
+                    }
+
+                    .footer .column:nth-child(2),
+                    .footer .column:nth-child(3) {
+                        width: 40%;
+                        display: inline-block;
+                    }
+                }
+
+                @media (max-width:1200px) {
+                    .footer .column ul li input {
+                        padding: 5px 5px;
+                        outline: none;
+                        border: 0;
+                        width: 70%;
+                        height: 34px;
+                        color: #1e1e1e;
+                    }
+
+                    .footer .column ul li .btn1 {
+                        position: relative;
+                        top: 2px;
+                    }
+                }
+
+                @media (max-width:940px) {
+                    .footer .column ul li input {
+                        padding: 5px 5px;
+                        outline: none;
+                        border: 0;
+                        width: 60%;
+                        height: 34px;
+                        color: #1e1e1e;
+                    }
+
+                    .footer .column ul li .btn1 {
+                        position: relative;
+                        top: 2px;
+                    }
+                }
+            </style>
+
+        </head>
+
+        <body>
+
+
+            <section>
+                <div class="major">
+
+
+                    <!--footer-->
+
+                    <br>
+                    <footer>
+                        <div class="footer">
+                            <div class="column">
+                                <ul>
+                                    <li class="title"> Company</li>
+                                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna aliqua.</li>
+                                </ul>
+                            </div>
+
+                            <div class="column">
+                                <ul>
+                                    <li class="title">OTHER LINKS</li>
+                                    <li><a href="#">Terms & Conditions</a></li>
+                                    <li><a href="#">Privacy Policy</a></li>
+                                    <li><a href="#">Cookie Policy</a></li>
+                                    <li><a href="#">Tickets</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="column">
+                                <ul>
+                                    <li class="title">SHORT CUT</li>
+                                    <li><a href="#">Contact Us</a></li>
+                                    <li><a href="#">Our Services</a></li>
+                                    <li><a href="#">Our Mission</a></li>
+                                    <li><a href="#">About Us</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="column">
+                                <ul>
+                                    <li class="title">NEWSLETTER</li>
+                                    <li>
+                                        <form action="#" method="post">
+                                            <input type="email" name="email" placeholder="Email*" maxlength="80"
+                                                required /><button class="btn1"><i
+                                                    class="fa fa-paper-plane"></i></button>
+                                        </form>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Address,State,Country,Pincode"><i
+                                                class="fa fa-map-marker"></i></a>
+                                        <a href="#"><i class="fa fa-phone"></i></a>
+                                        <a href="#"><i class="fa fa-envelope"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </footer>
+
+
+                </div>
+
+            </section>
+        </body>
+
+        </html>
+    </xmp>
+    <style>
+        body {
+            background-color: #000000;
+            color: white;
+            margin: 20px;
+        }
+
+        button {
+            background: transparent;
+            color: #28f2c2;
+            border: 1px solid #28f2c2;
+            width: 100%;
+            font-size: 30px;
+            padding: 15px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            color: #000000;
+            background-color: #28f2c2;
+        }
+
+        xmp {
+            border: 2px solid #28f2c2;
+            padding: 20px;
+        }
+    </style>
+    <script>
+        function copyCode() {
+            var codeBlock = document.getElementById("copy-code").innerText;
+
+            var tempElement = document.createElement("textarea");
+            tempElement.value = codeBlock;
+            document.body.appendChild(tempElement);
+
+            tempElement.select();
+            document.execCommand("copy");
+
+            document.body.removeChild(tempElement);
+
+            alert("Copied");
+        }
+    </script>
+
+</body>
+
+</html>

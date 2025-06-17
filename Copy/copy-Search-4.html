@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+</head>
+
+<body>
+   
+    <button onclick="copyCode()">Copy</button>
+
+   <xmp id="copy-code">
+    <!DOCTYPE html>
+    <html lang="en">
+    
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Search</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    
+    <body>
+        <nav class="nav">
+            <!-- <div class="nav-items">
+                <a href="#">Home</a>
+                <a href="#">Abouts us</a>
+                <a href="#">Team</a>
+                <a href="#">Contact</a>
+            </div> -->
+            <div class="search-box">
+                <input type="text" placeholder="Search" class="search-input" />
+                <button class="search-btn">🔎</button>
+            </div>
+        </nav>
+        <style>
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+    
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                font-family: 'Montserrat', sans-serif;
+                background: #333;
+            }
+    
+            /* .nav {
+                background-color: royalblue;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                max-width: 1000px;
+            }
+    
+            .nav-items {
+                margin: 0 30px;
+                display: flex;
+            }
+    
+            .nav-items a {
+                color: #fff;
+                padding: 2em 1em;
+                text-transform: uppercase;
+                text-decoration: none;
+                transition: background-color .3s, color .3s;
+            }
+    
+            .nav-items a:hover {
+                color: royalblue;
+                background-color: #fff;
+            } */
+    
+            .search-box {
+                position: relative;
+            }
+    
+            .search-input {
+                padding: 2em;
+                width: 300px;
+                background-color: #eee;
+                border: none;
+                color: #333;
+                font-size: 16px;
+                transform: translateX(0) scaleX(0);
+                transform-origin: right;
+                transition: transform .3s;
+            }
+    
+            .search-btn {
+                position: absolute;
+                top: 0;
+                right: 0;
+                height: 100%;
+                width: 80px;
+                border: none;
+                background-color: #3651aa;
+                cursor: pointer;
+    
+            }
+    
+            .search-btn:focus,
+            .search-input:focus {
+                outline: none;
+            }
+    
+            .search-btn:focus {
+                background-color: #203886;
+            }
+    
+            .search-input:focus {
+                background-color: #ddd;
+            }
+    
+            .active {
+                transform: translateX(-80px) scaleX(1);
+            }
+        </style>
+    
+        <script>
+    
+            const btn = document.querySelector(".search-btn");
+            const input = document.querySelector(".search-input");
+    
+            const showSearchBar = () => {
+                input.classList.toggle("active");
+            };
+    
+            btn.addEventListener("click", showSearchBar);
+        </script>
+    </body>
+    
+    </html>
+   </xmp>
+   <style>
+    body {
+        background-color: #000000;
+        color: white;
+        margin: 20px;
+    }
+    button{
+        background: transparent;
+        color: #28f2c2;
+        border: 1px solid #28f2c2;
+        width: 100%;
+        font-size: 30px;
+        padding: 15px;
+        cursor: pointer;
+    }
+    button:hover{
+        color: #000000;
+        background-color: #28f2c2;
+    }
+    xmp{
+        border: 2px solid #28f2c2;
+        padding: 20px;
+    }
+   </style>
+   <script>
+    function copyCode() {
+        var codeBlock = document.getElementById("copy-code").innerText;
+
+        var tempElement = document.createElement("textarea");
+        tempElement.value = codeBlock;
+        document.body.appendChild(tempElement);
+
+        tempElement.select();
+        document.execCommand("copy");
+
+        document.body.removeChild(tempElement);
+
+        alert("Copied");
+    }
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social media</title>
+</head>
+
+<body>
+   
+    <button onclick="copyCode()">Copy</button>
+
+   <xmp id="copy-code">
+    <!DOCTYPE html>
+    <html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>social media</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+    
+            body {
+                background-color: rgb(245, 245, 245);
+                
+            }
+    
+            
+            .isometric {
+                display: flex;
+                height: 20vh;
+                align-items: flex-end;
+                justify-content: center;
+                margin-top: 25%;
+            }
+    
+     
+    
+            .fab {
+                color: #fff;
+                font-size: 4vmin;
+            }
+    
+    
+    
+            .isometric {
+                align-items: first baseline;
+            }
+    
+            .isometric ul {
+                display: flex;
+            }
+    
+            .isometric ul li {
+                list-style: none;
+                margin: 0 30px;
+            }
+    
+            .isometric ul li a {
+                background: #fff;
+                position: relative;
+                width: 7vmin;
+                height: 7vmin;
+                display: flex;
+                text-decoration: none;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                transform: perspective(1000px) rotate(-30deg) skew(25deg);
+                transition: 0.5s;
+                box-shadow: -20px 20px 10px rgba(0, 0, 0, 0.5);
+            }
+    
+            .isometric ul li a .fab {
+                font-size: 1.5rem;
+                color: #000;
+                transition: 0.5s;
+            }
+    
+            .isometric ul li a:before,
+            .isometric ul li a:after {
+                content: "";
+                position: absolute;
+            }
+    
+            .isometric ul li a:before {
+                top: 5px;
+                left: -10px;
+                height: 100%;
+                width: 10px;
+                background: #b1b1b1;
+                transition: 0.5s;
+                transform: skewY(-45deg)
+            }
+    
+            .isometric ul li a:after {
+                bottom: -10px;
+                left: -6px;
+                height: 10px;
+                width: 100%;
+                background: #b1b1b1;
+                transition: 0.5s;
+                transform: skewX(-45deg)
+            }
+    
+            .isometric ul li a:hover {
+                transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(20px, -20px);
+                box-shadow: -50px 50px 20px rgba(0, 0, 0, 0.5)
+            }
+    
+            .isometric ul li a .fab {
+                color: #000;
+            }
+    
+            .isometric ul li:nth-child(1):hover a .fab {
+                color: #fff;
+            }
+    
+            .isometric ul li:nth-child(1):hover a {
+                background: #3b5598;
+            }
+    
+            .isometric ul li:nth-child(1):hover a:before {
+                background: #1d3060;
+            }
+    
+            .isometric ul li:nth-child(1):hover a:after {
+                background: #405ca5;
+            }
+    
+            .isometric ul li:nth-child(2):hover a .fab {
+                color: #fff;
+            }
+    
+            .isometric ul li:nth-child(2):hover a {
+                background: #25d366;
+            }
+    
+            .isometric ul li:nth-child(2):hover a:before {
+                background: #209d4f;
+            }
+    
+            .isometric ul li:nth-child(2):hover a:after {
+                background: #3db76a;
+            }
+    
+            .isometric ul li:nth-child(3):hover a .fab {
+                color: #fff;
+            }
+    
+            .isometric ul li:nth-child(3):hover a {
+                background: #ce0606;
+            }
+    
+            .isometric ul li:nth-child(3):hover a:before {
+                background: #9b0f0f;
+            }
+    
+            .isometric ul li:nth-child(3):hover a:after {
+                background: #c61818;
+            }
+    
+            .isometric ul li:nth-child(4):hover a {
+                background: gray;
+            }
+    
+            .isometric ul li:nth-child(4):hover a:before {
+                background: #5b5a5a;
+            }
+    
+            .isometric ul li:nth-child(4):hover a:after {
+                background: #8a8989;
+            }
+    
+            .isometric ul li:nth-child(5):hover a .fab {
+                color: #fff;
+            }
+    
+            .isometric ul li:nth-child(5):hover a {
+                background: #00acee;
+            }
+    
+            .isometric ul li:nth-child(5):hover a:before {
+                background: #0384cc;
+            }
+    
+            .isometric ul li:nth-child(5):hover a:after {
+                background: #06b7fb;
+            }
+        </style>
+    </head>
+    
+    <body>
+    
+        <section class="isometric">
+            <ul>
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fab fa-whatsapp"></i></a></li>
+                <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                <li><a href="#"><i class="fab fa-github"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+            </ul>
+        </section>
+        <script src="https://kit.fontawesome.com/bad7f7f5d4.js" crossorigin="anonymous"></script>
+    </body>
+    
+    </html>
+   </xmp>
+   <style>
+    body {
+        background-color: #000000;
+        color: white;
+        margin: 20px;
+    }
+    button{
+        background: transparent;
+        color: #28f2c2;
+        border: 1px solid #28f2c2;
+        width: 100%;
+        font-size: 30px;
+        padding: 15px;
+        cursor: pointer;
+    }
+    button:hover{
+        color: #000000;
+        background-color: #28f2c2;
+    }
+    xmp{
+        border: 2px solid #28f2c2;
+        padding: 20px;
+    }
+   </style>
+   <script>
+    function copyCode() {
+        var codeBlock = document.getElementById("copy-code").innerText;
+
+        var tempElement = document.createElement("textarea");
+        tempElement.value = codeBlock;
+        document.body.appendChild(tempElement);
+
+        tempElement.select();
+        document.execCommand("copy");
+
+        document.body.removeChild(tempElement);
+
+        alert("Copied");
+    }
+</script>
+
+</body>
+
+</html>

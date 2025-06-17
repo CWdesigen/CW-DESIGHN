@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+</head>
+
+<body>
+   
+    <button onclick="copyCode()">Copy</button>
+
+   <xmp id="copy-code">
+    <!DOCTYPE html>
+    <html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Animated Gradient Underglow</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    
+    <body>
+        <div class="box">
+            Qusai - CW Design
+        </div>
+        <style>
+            body {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 100vh;
+                color: #999;
+            }
+    
+            .box {
+                background: white;
+                padding: 16px 24px;
+                position: relative;
+                border-radius: 8px;
+                box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.01);
+            }
+    
+            .box::after {
+                position: absolute;
+                content: "";
+                top: 15px;
+                left: 0;
+                right: 0;
+                z-index: -1;
+                height: 100%;
+                width: 100%;
+                transform: scale(0.9) translateZ(0);
+                filter: blur(15px);
+                background: linear-gradient(to left,
+                        #ff5770,
+                        #e4428d,
+                        #c42da8,
+                        #9e16c3,
+                        #6501de,
+                        #9e16c3,
+                        #c42da8,
+                        #e4428d,
+                        #ff5770);
+                background-size: 200% 200%;
+                -webkit-animation: animateGlow 1.25s linear infinite;
+                animation: animateGlow 1.25s linear infinite;
+            }
+    
+            @-webkit-keyframes animateGlow {
+                0% {
+                    background-position: 0% 50%;
+                }
+    
+                100% {
+                    background-position: 200% 50%;
+                }
+            }
+    
+            @keyframes animateGlow {
+                0% {
+                    background-position: 0% 50%;
+                }
+    
+                100% {
+                    background-position: 200% 50%;
+                }
+            }
+        </style>
+    </body>
+    
+    </html>
+   </xmp>
+   <style>
+    body {
+        background-color: #000000;
+        color: white;
+        margin: 20px;
+    }
+    button{
+        background: transparent;
+        color: #28f2c2;
+        border: 1px solid #28f2c2;
+        width: 100%;
+        font-size: 30px;
+        padding: 15px;
+        cursor: pointer;
+    }
+    button:hover{
+        color: #000000;
+        background-color: #28f2c2;
+    }
+    xmp{
+        border: 2px solid #28f2c2;
+        padding: 20px;
+    }
+   </style>
+   <script>
+    function copyCode() {
+        var codeBlock = document.getElementById("copy-code").innerText;
+
+        var tempElement = document.createElement("textarea");
+        tempElement.value = codeBlock;
+        document.body.appendChild(tempElement);
+
+        tempElement.select();
+        document.execCommand("copy");
+
+        document.body.removeChild(tempElement);
+
+        alert("Copied");
+    }
+</script>
+
+</body>
+
+</html>
